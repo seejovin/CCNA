@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "question_history_incremental_saves": 1000,
+  "fresh_component_loads": 1010,
+  "sets": 10,
+  "collection_snapshot_questions": 1000,
+  "writes": 1000,
+  "total_stored_utf16_bytes": 235676
+}

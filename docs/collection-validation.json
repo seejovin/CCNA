@@ -1,0 +1,212 @@
+{
+  "version": "CCNA 200-301 v1.1",
+  "reviewed_on": "2026-09-14",
+  "total_questions": 1000,
+  "sets": [
+    {
+      "set": 1,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "matching": 5,
+        "single": 77,
+        "multiple": 18
+      },
+      "file": "data/questions.json",
+      "sha256": "c0d9ce89219f4ddd788452560c56438ed3829ec7b26b0ad05178ea93237d4b7d"
+    },
+    {
+      "set": 2,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "single": 84,
+        "multiple": 13,
+        "matching": 3
+      },
+      "file": "data/sets/set-02.json",
+      "sha256": "39efa14eaf62a578a802c3d1bf7c3fca45392b692f53c3ffd6088e4476ed8b8b"
+    },
+    {
+      "set": 3,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "single": 81,
+        "multiple": 15,
+        "matching": 4
+      },
+      "file": "data/sets/set-03.json",
+      "sha256": "76d9567942dfcf8442a3409c6b356108ab59891fefe812a6400d1829906070d6"
+    },
+    {
+      "set": 4,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "single": 83,
+        "multiple": 13,
+        "matching": 4
+      },
+      "file": "data/sets/set-04.json",
+      "sha256": "3f12f37fd3b5999cd9a41aab974c47b5204c5efce5d007b8a391310b6d7c2994"
+    },
+    {
+      "set": 5,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "single": 79,
+        "multiple": 16,
+        "matching": 5
+      },
+      "file": "data/sets/set-05.json",
+      "sha256": "c99b6cc0b0d2be9cd9a911752c413f2eaea21ffb5c19221be0259c764ba12a9b"
+    },
+    {
+      "set": 6,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "single": 82,
+        "multiple": 13,
+        "matching": 5
+      },
+      "file": "data/sets/set-06.json",
+      "sha256": "f766194f8a3cd8527cb8ae54327957966e1ab7042a7bdab4760fb480e7264bf2"
+    },
+    {
+      "set": 7,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "single": 84,
+        "multiple": 13,
+        "matching": 3
+      },
+      "file": "data/sets/set-07.json",
+      "sha256": "7d0763cf3c539284a83b8635e73add3f558f1e846c13c41630970ac040a2fcc6"
+    },
+    {
+      "set": 8,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "single": 82,
+        "multiple": 14,
+        "matching": 4
+      },
+      "file": "data/sets/set-08.json",
+      "sha256": "1f32213898642fc338f15d9e5e74c7c2882767fc4fedd60a0fc4b56bca7435e2"
+    },
+    {
+      "set": 9,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "single": 81,
+        "multiple": 14,
+        "matching": 5
+      },
+      "file": "data/sets/set-09.json",
+      "sha256": "d96e19c5b3d028489d7595c1396129bf82faccee75653309a6175b233048dd56"
+    },
+    {
+      "set": 10,
+      "questions": 100,
+      "domain_counts": {
+        "1": 20,
+        "2": 20,
+        "3": 25,
+        "4": 10,
+        "5": 15,
+        "6": 10
+      },
+      "question_types": {
+        "single": 82,
+        "multiple": 15,
+        "matching": 3
+      },
+      "file": "data/sets/set-10.json",
+      "sha256": "0b24d11c15195fa921caeb4b7a0dfce324f0b984cfd67f05de16987d00129a97"
+    }
+  ],
+  "checks": {
+    "python_tests_passed": 77,
+    "node_storage_tests_passed": 18,
+    "final_collection_acceptance_tests_passed": 2,
+    "original_set01_bytes_preserved": true,
+    "all_ten_question_banks_preserved": true
+  },
+  "limitations": "Original non-lab practice content. Author and AI review, not human SME certification, learner calibration or Cisco endorsement.",
+  "features": [
+    "Per-set and overall domain/subsection analysis",
+    "111 named curriculum objectives",
+    "Read-only all-set browser snapshots",
+    "Automatic completion results",
+    "CSV results exports"
+  ]
+}

@@ -1,0 +1,4844 @@
+{
+  "metadata": {
+    "set_id": "ccna-200-301-v1.1-set-05",
+    "title": "CCNA Practice · Set 05",
+    "exam": "CCNA 200-301",
+    "blueprint_version": "1.1",
+    "reviewed_on": "2026-09-14",
+    "question_count": 100,
+    "status": "original practice; author-reviewed, not learner-calibrated",
+    "blueprint_url": "https://learningcontent.cisco.com/documents/marketing/exam-topics/200-301-CCNA-v1.1.pdf",
+    "interactive_labs": false,
+    "scoring": "One point per fully correct response; no partial credit. First submissions count until restart. This is not Cisco exam scoring.",
+    "question_types": {
+      "single": 79,
+      "multiple": 16,
+      "matching": 5
+    },
+    "domain_counts": {
+      "1": 20,
+      "2": 20,
+      "3": 25,
+      "4": 10,
+      "5": 15,
+      "6": 10
+    },
+    "unique_reference_urls": 111
+  },
+  "questions": [
+    {
+      "id": "CCNA5-001",
+      "domain": 1,
+      "objectives": [
+        "1.1.a"
+      ],
+      "type": "single",
+      "difficulty": "Foundation",
+      "prompt": "A branch has one subnet for users and another for servers. A packet crosses their router. Which action belongs to the router’s Layer 3 role?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Choosing an RF channel for the client",
+          "explanation": "That is a wireless radio-management function."
+        },
+        {
+          "id": "B",
+          "text": "Learning only the packet’s destination MAC as a source",
+          "explanation": "MAC source learning is a different Layer 2 operation."
+        },
+        {
+          "id": "C",
+          "text": "Supplying a guest operating-system kernel",
+          "explanation": "That is unrelated to routing."
+        },
+        {
+          "id": "D",
+          "text": "Selecting a next hop using the destination IP address",
+          "explanation": "The routing function chooses how to reach the destination network."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "The router chooses a forwarding path in the IP topology. Ethernet headers serve the individual link rather than replacing the IP routing decision.",
+      "references": [
+        {
+          "title": "Networking Basics: What You Need To Know",
+          "url": "https://www.cisco.com/site/us/en/learn/topics/small-business/networking-basics.html",
+          "section": "Switches; Routers; Access Points"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-002",
+      "domain": 1,
+      "objectives": [
+        "1.2.a"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A building uses access switches connected to a redundant pair that combines distribution and core functions. What makes this a two-tier campus?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Exactly two physical switches exist",
+          "explanation": "There may be many access switches and two aggregation devices."
+        },
+        {
+          "id": "B",
+          "text": "Distribution and core roles are combined in one tier",
+          "explanation": "The access tier plus collapsed distribution/core creates two logical tiers."
+        },
+        {
+          "id": "C",
+          "text": "Only two VLANs are supported",
+          "explanation": "Tier count does not determine VLAN count."
+        },
+        {
+          "id": "D",
+          "text": "Every server must connect directly to every switch",
+          "explanation": "That is not a collapsed-core requirement."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Count architectural roles, not chassis. Redundancy within a tier does not create an additional tier.",
+      "references": [
+        {
+          "title": "Campus LAN and Wireless LAN Solution Design Guide",
+          "url": "https://www.cisco.com/c/en/us/td/docs/solutions/CVD/Campus/cisco-campus-lan-wlan-design-guide.html",
+          "section": "Distribution layer — Two-tier design"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-003",
+      "domain": 1,
+      "objectives": [
+        "1.3.a"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "The same duplex LC connector fits an SR module and an LR module. Why is connector fit insufficient to establish compatibility?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "An LC connector forces every module to 1 Gb/s",
+          "explanation": "Connector type alone does not select the data rate."
+        },
+        {
+          "id": "B",
+          "text": "SR and LR must use the same wavelength because both use LC",
+          "explanation": "The modules can require different optical signaling and fiber."
+        },
+        {
+          "id": "C",
+          "text": "Fiber mode, wavelength, reach, and optical levels must also match",
+          "explanation": "Mechanical mating does not establish an acceptable optical channel."
+        },
+        {
+          "id": "D",
+          "text": "IPv4 private addressing prevents LR operation",
+          "explanation": "Address classification does not determine optical compatibility."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Physical fit is only one requirement. Select optics and fiber as an interoperable end-to-end channel.",
+      "references": [
+        {
+          "title": "Cisco 10GBASE SFP+ Modules Data Sheet",
+          "url": "https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/data_sheet_c78-455693.html",
+          "section": "Cisco SFP-10G-SR module; Cisco SFP-10G-LR module; Cisco SFP-10G-T-X module"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-004",
+      "domain": 1,
+      "objectives": [
+        "1.4"
+      ],
+      "type": "single",
+      "difficulty": "Foundation",
+      "prompt": "A half-duplex legacy Ethernet port records ordinary collisions while transmitting on a correctly sized hub segment. There are no late collisions, errors, or mismatches. What is the sound interpretation?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Some collisions are expected during shared-medium contention",
+          "explanation": "CSMA/CD resolves overlapping attempts on half-duplex shared Ethernet."
+        },
+        {
+          "id": "B",
+          "text": "Any collision proves an IP address conflict",
+          "explanation": "Collision counters describe link access, not duplicate IP assignments."
+        },
+        {
+          "id": "C",
+          "text": "The interface must actually be full duplex",
+          "explanation": "Full-duplex operation does not use collisions for access."
+        },
+        {
+          "id": "D",
+          "text": "The hub has learned the wrong MAC address",
+          "explanation": "A hub does not build a MAC forwarding table."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "An ordinary collision is not automatically a cabling fault in this explicitly half-duplex environment. Interpret counters against the link’s intended operating mode.",
+      "references": [
+        {
+          "title": "Configure and Verify Ethernet 10/100/1000Mb Half/Full Duplex Auto-Negotiation",
+          "url": "https://www.cisco.com/c/en/us/support/docs/lan-switching/ethernet/10561-3.html",
+          "section": "Background Information; Auto-Negotiation on Catalyst Switches that Run Cisco IOS Software"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-005",
+      "domain": 1,
+      "objectives": [
+        "1.5"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A packet capture shows the first three control exchanges of a standard successful TCP connection. Which sequence is expected?",
+      "exhibit": {
+        "kind": "table",
+        "headers": [
+          "Exchange",
+          "Direction"
+        ],
+        "rows": [
+          [
+            "1",
+            "Client to server"
+          ],
+          [
+            "2",
+            "Server to client"
+          ],
+          [
+            "3",
+            "Client to server"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "ACK → FIN → SYN",
+          "explanation": "FIN is used for closing, not this establishment sequence."
+        },
+        {
+          "id": "B",
+          "text": "SYN → SYN → FIN",
+          "explanation": "This omits the normal acknowledgment progression."
+        },
+        {
+          "id": "C",
+          "text": "FIN → ACK → RST",
+          "explanation": "These flags describe termination/reset actions."
+        },
+        {
+          "id": "D",
+          "text": "SYN → SYN-ACK → ACK",
+          "explanation": "This is the normal three-way establishment handshake."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "TCP synchronizes both directions of sequence space during establishment. UDP does not perform this protocol-level handshake.",
+      "references": [
+        {
+          "title": "RFC 9293: Transmission Control Protocol (TCP)",
+          "url": "https://www.rfc-editor.org/rfc/rfc9293.html#section-2.2",
+          "section": "2.2. Key TCP Concepts"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-006",
+      "domain": 1,
+      "objectives": [
+        "1.6"
+      ],
+      "type": "single",
+      "difficulty": "Challenge",
+      "prompt": "A printer was assigned 10.30.7.0/23. An engineer rejects it solely because its final octet is zero. Which assessment is correct?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "It is the /23 network address",
+          "explanation": "The containing /23 begins at 10.30.6.0."
+        },
+        {
+          "id": "B",
+          "text": "It is an ordinary usable address in 10.30.6.0/23",
+          "explanation": "A zero final octet is allowed when the complete host field is not all zero."
+        },
+        {
+          "id": "C",
+          "text": "It is the /23 directed broadcast address",
+          "explanation": "That address is 10.30.7.255."
+        },
+        {
+          "id": "D",
+          "text": "Every address ending in .0 is prohibited",
+          "explanation": "Validity depends on all host bits under the configured mask."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "The host field spans the last bit of the third octet and all of the fourth. Here it is neither all zero nor all one.",
+      "references": [
+        {
+          "title": "Configure IP Addresses and Unique Subnets for New Users",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+          "section": "Network Masks; Understand Subnetting; VLSM Example"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-007",
+      "domain": 1,
+      "objectives": [
+        "1.7"
+      ],
+      "type": "multiple",
+      "difficulty": "Challenge",
+      "prompt": "Which TWO complete proposed subnets are wholly contained in RFC 1918 space? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "172.0.0.0/12",
+          "explanation": "This spans 172.0–172.15, outside the private 172.16/12 range."
+        },
+        {
+          "id": "B",
+          "text": "192.168.0.0/15",
+          "explanation": "The /15 also includes 192.169.0.0/16, which is not RFC 1918."
+        },
+        {
+          "id": "C",
+          "text": "10.96.0.0/11",
+          "explanation": "Every address remains inside private 10.0.0.0/8."
+        },
+        {
+          "id": "D",
+          "text": "172.24.0.0/13",
+          "explanation": "Its second octet spans 24–31, entirely within private 172.16/12."
+        },
+        {
+          "id": "E",
+          "text": "192.0.0.0/8",
+          "explanation": "Only a much smaller portion of this /8 is RFC 1918."
+        }
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "explanation": "Classify the entire proposed prefix, not only its first displayed address. A larger supernet can include nonprivate space.",
+      "references": [
+        {
+          "title": "RFC 1918: Address Allocation for Private Internets",
+          "url": "https://www.rfc-editor.org/rfc/rfc1918#section-3",
+          "section": "3. Private Address Space"
+        },
+        {
+          "title": "Configure IP Addresses and Unique Subnets for New Users",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+          "section": "Network Masks; Understand Subnetting; VLSM Example"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-008",
+      "domain": 1,
+      "objectives": [
+        "1.8"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An inventory lists 2001:db8:4:9:0:0:0:10/64. Which prefix should be recorded as the directly attached /64 network?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "2001:db8:4:9::/64",
+          "explanation": "The first four hextets are the 64-bit prefix."
+        },
+        {
+          "id": "B",
+          "text": "2001:db8:4::/64",
+          "explanation": "This replaces the fourth hextet 9 with zero."
+        },
+        {
+          "id": "C",
+          "text": "2001:db8:4:9::10/128",
+          "explanation": "This describes the host, not the attached /64."
+        },
+        {
+          "id": "D",
+          "text": "2001:db8:4:10::/64",
+          "explanation": "This changes the fourth hextet from 9 to 10 and therefore identifies a different /64."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "A /64 boundary falls after the fourth hextet. Host bits are zeroed when representing the network prefix.",
+      "references": [
+        {
+          "title": "RFC 4291: IP Version 6 Addressing Architecture",
+          "url": "https://www.rfc-editor.org/rfc/rfc4291#section-2.3",
+          "section": "2.3. Text Representation of Address Prefixes; 2.4. Address Type Identification; 2.5.6. Link-Local IPv6 Unicast Addresses; 2.7. Multicast Addresses"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-009",
+      "domain": 1,
+      "objectives": [
+        "1.9.a"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "One interface has fe80::14 and fd48:2190:abcd:3::14. Which TWO statements are correct? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Only one IPv6 address may exist per interface",
+          "explanation": "Multiple addresses and scopes can coexist."
+        },
+        {
+          "id": "B",
+          "text": "The fe80 address is confined to its link",
+          "explanation": "That address has link-local unicast scope."
+        },
+        {
+          "id": "C",
+          "text": "The fd48 address must be globally advertised",
+          "explanation": "ULA does not require global Internet advertisement."
+        },
+        {
+          "id": "D",
+          "text": "The fe80 address is an IPv6 broadcast address",
+          "explanation": "IPv6 has no broadcast address type."
+        },
+        {
+          "id": "E",
+          "text": "The fd48 address can participate in routing within selected private networks",
+          "explanation": "Unique local addresses are not restricted to a single link."
+        }
+      ],
+      "answer": [
+        "B",
+        "E"
+      ],
+      "explanation": "IPv6 interfaces commonly have multiple addresses. Link-local and ULA serve different scopes and can exist together.",
+      "references": [
+        {
+          "title": "RFC 4291: IP Version 6 Addressing Architecture",
+          "url": "https://www.rfc-editor.org/rfc/rfc4291#section-2.3",
+          "section": "2.3. Text Representation of Address Prefixes; 2.4. Address Type Identification; 2.5.6. Link-Local IPv6 Unicast Addresses; 2.7. Multicast Addresses"
+        },
+        {
+          "title": "RFC 4193: Unique Local IPv6 Unicast Addresses",
+          "url": "https://www.rfc-editor.org/rfc/rfc4193#section-3.1",
+          "section": "1. Introduction; 3.1. Format"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-010",
+      "domain": 1,
+      "objectives": [
+        "1.10"
+      ],
+      "type": "single",
+      "difficulty": "Foundation",
+      "prompt": "A Windows administrator needs to inspect whether DHCP is enabled and which DNS servers are configured. Which command provides those adapter details?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "ipconfig /flushdns",
+          "explanation": "This clears cached DNS entries rather than displaying the full adapter configuration."
+        },
+        {
+          "id": "B",
+          "text": "ipconfig /release",
+          "explanation": "This releases applicable DHCP configuration and is not a read-only inspection."
+        },
+        {
+          "id": "C",
+          "text": "ipconfig /all",
+          "explanation": "The detailed display includes DHCP and DNS configuration fields."
+        },
+        {
+          "id": "D",
+          "text": "ipconfig /displaydns",
+          "explanation": "This shows the resolver cache, not all adapter parameters."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Use a read-only detailed configuration view before changing the adapter. Resolver cache entries are different from configured DNS server addresses.",
+      "references": [
+        {
+          "title": "ipconfig",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig",
+          "section": "Syntax; Parameters (/all)"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-011",
+      "domain": 1,
+      "objectives": [
+        "1.11.b"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A client sees two APs with SSID Warehouse but different BSSIDs. Which conclusion is justified?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The APs must be on the same physical channel",
+          "explanation": "The same SSID may be used across different channels."
+        },
+        {
+          "id": "B",
+          "text": "The client has discovered a mandatory address conflict",
+          "explanation": "SSID reuse is normal and does not imply an IP conflict."
+        },
+        {
+          "id": "C",
+          "text": "BSSID is the shared human-readable network name",
+          "explanation": "That is the SSID; BSSID identifies a basic service set."
+        },
+        {
+          "id": "D",
+          "text": "The shared name can be advertised by distinct basic service sets",
+          "explanation": "Different AP radio service sets can support the same WLAN name."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "SSID naming permits a common network identity across APs. A BSSID distinguishes the individual basic service set.",
+      "references": [
+        {
+          "title": "Campus LAN and Wireless LAN Solution Design Guide",
+          "url": "https://www.cisco.com/c/en/us/td/docs/solutions/CVD/Campus/cisco-campus-lan-wlan-design-guide.html",
+          "section": "Centralized (local-mode) design model"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-012",
+      "domain": 1,
+      "objectives": [
+        "1.12"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An application requires a different operating-system kernel from its neighboring workload on the same physical server. Which technology most directly supplies separate guest kernels?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Conventional virtual machines",
+          "explanation": "Each VM can run its own guest operating system."
+        },
+        {
+          "id": "B",
+          "text": "Two ordinary Linux containers in one Linux host OS",
+          "explanation": "Those process containers share the host kernel."
+        },
+        {
+          "id": "C",
+          "text": "Two VRFs in one router",
+          "explanation": "VRFs separate routing contexts, not guest operating systems."
+        },
+        {
+          "id": "D",
+          "text": "Two SSIDs on one AP",
+          "explanation": "Wireless names do not create OS kernels."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "VMs virtualize a machine environment for separate guest operating systems. Standard process containers isolate workloads while sharing their host kernel.",
+      "references": [
+        {
+          "title": "What is a container?",
+          "url": "https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/#containers-versus-virtual-machines-vms",
+          "section": "Containers versus virtual machines (VMs)"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-013",
+      "domain": 1,
+      "objectives": [
+        "1.13.a",
+        "1.13.d"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A destination host only receives traffic and sends no eligible source frames for longer than the configured MAC aging time. Its dynamic entry expires. Why did received traffic not necessarily keep the entry fresh?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Aging occurs only when a VLAN is deleted",
+          "explanation": "Dynamic entries can expire in an unchanged VLAN."
+        },
+        {
+          "id": "B",
+          "text": "Dynamic learning refreshes location from observed source traffic",
+          "explanation": "Packets addressed to a host do not prove its current ingress location."
+        },
+        {
+          "id": "C",
+          "text": "The switch refreshes only IPv6 hosts",
+          "explanation": "Source learning is independent of that IP address family."
+        },
+        {
+          "id": "D",
+          "text": "The destination must be assigned a static IP to prevent aging",
+          "explanation": "IP assignment method does not itself create a static MAC entry."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Traffic sent toward a location is not evidence received from that location. Source observations are the basis for ordinary dynamic MAC learning.",
+      "references": [
+        {
+          "title": "Configuring MAC Address Tables",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5500/sw/layer2/7x/b_5500_Layer2_Config_7x/config_mac_address_tables.pdf",
+          "section": "Information About MAC Addresses (page 1); Configuring the Aging Time for the MAC Table (page 2)"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-014",
+      "domain": 1,
+      "objectives": [
+        "1.1.h"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A non-PoE Ethernet printer is connected to a standards-compliant PoE port operating in automatic detection mode. What should happen before normal PoE power is supplied?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The port forces maximum voltage into every attached device",
+          "explanation": "Standards-based automatic operation detects an eligible powered device first."
+        },
+        {
+          "id": "B",
+          "text": "The printer must receive a DHCP lease as its power signature",
+          "explanation": "PoE detection is not DHCP."
+        },
+        {
+          "id": "C",
+          "text": "The port checks for a compatible powered-device signature",
+          "explanation": "Detection prevents ordinary PoE allocation to an ineligible device."
+        },
+        {
+          "id": "D",
+          "text": "The printer’s MAC address must be globally unique in a cloud database",
+          "explanation": "PoE detection does not use such an inventory lookup."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Automatic PoE power admission is distinct from ordinary data link attachment. Connecting a non-PoE device does not make it request PoE power.",
+      "references": [
+        {
+          "title": "Interface and Hardware Components Configuration Guide, Cisco IOS XE 17.14.x (Catalyst 9200 Switches): Configuring Power over Ethernet",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9200/software/release/17-14/configuration_guide/int_hw/b_1714_int_and_hw_9200_cg/configuring_poe.html",
+          "section": "Powered-Device Detection and Initial Power Allocation"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-015",
+      "domain": 1,
+      "objectives": [
+        "1.6"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "The only addresses available for a new point-to-point link are 192.0.2.20/30 through 192.0.2.23/30. Using ordinary /30 addressing, which pair belongs on its two interfaces?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "192.0.2.20 and 192.0.2.21",
+          "explanation": "The .20 address identifies the /30 subnet."
+        },
+        {
+          "id": "B",
+          "text": "192.0.2.22 and 192.0.2.23",
+          "explanation": "The .23 address is the /30 broadcast."
+        },
+        {
+          "id": "C",
+          "text": "192.0.2.20 and 192.0.2.23",
+          "explanation": "These are both reserved boundary addresses for this /30."
+        },
+        {
+          "id": "D",
+          "text": "192.0.2.21 and 192.0.2.22",
+          "explanation": "These are the two ordinary usable host addresses."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "A /30 block has four addresses. For this block, its middle two addresses identify the link interfaces.",
+      "references": [
+        {
+          "title": "Configure IP Addresses and Unique Subnets for New Users",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html",
+          "section": "Network Masks; Understand Subnetting; VLSM Example"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-016",
+      "domain": 1,
+      "objectives": [
+        "1.9.d"
+      ],
+      "type": "single",
+      "difficulty": "Challenge",
+      "prompt": "An EUI-64-derived interface identifier is 021a:2bff:fe3c:4d5e. Assuming it came from a 48-bit MAC through the specified modified EUI-64 procedure, which original MAC is recovered?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "00-1A-2B-3C-4D-5E",
+          "explanation": "Remove FF-FE and invert the 02 bit in the first byte."
+        },
+        {
+          "id": "B",
+          "text": "02-1A-2B-3C-4D-5E",
+          "explanation": "This removes the inserted bytes but does not reverse the U/L inversion."
+        },
+        {
+          "id": "C",
+          "text": "03-1A-2B-3C-4D-5E",
+          "explanation": "This changes the wrong first-byte bit."
+        },
+        {
+          "id": "D",
+          "text": "00-1A-FF-FE-4D-5E",
+          "explanation": "This removes original bytes rather than the inserted middle pair."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "The specified transformation is reversible when its origin is known. Do not assume every IPv6 identifier containing ff:fe was necessarily generated this way.",
+      "references": [
+        {
+          "title": "RFC 2464: Transmission of IPv6 Packets over Ethernet Networks",
+          "url": "https://datatracker.ietf.org/doc/html/rfc2464#section-4",
+          "section": "4. Stateless Autoconfiguration"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-017",
+      "domain": 1,
+      "objectives": [
+        "1.11.c"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A wireless survey records signal −62 dBm and noise −92 dBm at location A, then signal −62 dBm and noise −75 dBm at location B. Which location has the better signal-to-noise margin?",
+      "exhibit": {
+        "kind": "table",
+        "headers": [
+          "Location",
+          "Signal",
+          "Noise"
+        ],
+        "rows": [
+          [
+            "A",
+            "−62 dBm",
+            "−92 dBm"
+          ],
+          [
+            "B",
+            "−62 dBm",
+            "−75 dBm"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "B, because −75 is numerically greater than −92",
+          "explanation": "The higher noise floor reduces the margin."
+        },
+        {
+          "id": "B",
+          "text": "A, because its signal is 30 dB above noise rather than 13 dB",
+          "explanation": "Subtract noise from signal in each location."
+        },
+        {
+          "id": "C",
+          "text": "Both, because equal signal strength guarantees equal quality",
+          "explanation": "Noise differs despite identical received signal."
+        },
+        {
+          "id": "D",
+          "text": "Neither, because negative dBm means no signal exists",
+          "explanation": "Negative dBm indicates power below 1 mW, not absent power."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Assess desired signal relative to the noise floor. The same signal power can produce very different margins in different noise conditions.",
+      "references": [
+        {
+          "title": "Meraki Wireless for Enterprise Best Practices — RF Design",
+          "url": "https://documentation.meraki.com/Platform_Management/Dashboard_Administration/Design_and_Configure/Architectures_and_Best_Practices/Meraki_Wireless_for_Enterprise_Best_Practices/Meraki_Wireless_for_Enterprise_Best_Practices_-_RF_Design",
+          "section": "RF design; signal-to-noise ratio; transmit power"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-018",
+      "domain": 1,
+      "objectives": [
+        "1.13.b",
+        "1.13.c"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "A switch’s table contains destination MAC M only in VLAN 20. A frame for M arrives in VLAN 10, where M has no entry. Which TWO statements follow with ordinary forwarding and no filtering features? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The VLAN 20 entry authorizes routing into VLAN 20",
+          "explanation": "A MAC entry does not authorize or perform inter-VLAN routing."
+        },
+        {
+          "id": "B",
+          "text": "The switch ignores VLAN identity in its lookup",
+          "explanation": "MAC forwarding context includes the VLAN."
+        },
+        {
+          "id": "C",
+          "text": "The destination is unknown within VLAN 10",
+          "explanation": "A mapping in another VLAN does not supply this lookup."
+        },
+        {
+          "id": "D",
+          "text": "The frame is flooded to the other eligible VLAN 10 ports",
+          "explanation": "Unknown-unicast flooding remains in the ingress VLAN."
+        },
+        {
+          "id": "E",
+          "text": "The frame must be sent through every port in every VLAN",
+          "explanation": "Flooding does not remove VLAN boundaries."
+        }
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "explanation": "A MAC address table is not a single VLAN-independent location list. Use the entry in the frame’s forwarding context.",
+      "references": [
+        {
+          "title": "Configuring MAC Address Tables",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus5500/sw/layer2/7x/b_5500_Layer2_Config_7x/config_mac_address_tables.pdf",
+          "section": "Information About MAC Addresses (page 1); Configuring the Aging Time for the MAC Table (page 2)"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-019",
+      "domain": 1,
+      "objectives": [
+        "1.2.f"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An organization operates its own fixed server racks without a self-service cloud layer. Moving an application from a rented public-cloud VM into those racks changes which aspect?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The application’s required transport protocol must become UDP",
+          "explanation": "Hosting location does not mandate a transport change."
+        },
+        {
+          "id": "B",
+          "text": "The physical Ethernet frame length must double",
+          "explanation": "That is not implied by the move."
+        },
+        {
+          "id": "C",
+          "text": "The hosting model changes to traditional on-premises infrastructure",
+          "explanation": "The organization now operates the application on its own fixed equipment."
+        },
+        {
+          "id": "D",
+          "text": "The service becomes a WAN circuit",
+          "explanation": "Compute hosting and connectivity are different aspects."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "The change concerns where and how computing resources are provided. It does not by itself determine application protocol or frame format.",
+      "references": [
+        {
+          "title": "NIST SP 800-145: The NIST Definition of Cloud Computing",
+          "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf",
+          "section": "2. The NIST Definition of Cloud Computing — Essential Characteristics; Deployment Models"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-020",
+      "domain": 1,
+      "objectives": [
+        "1.10"
+      ],
+      "type": "matching",
+      "difficulty": "Applied",
+      "prompt": "Match each displayed client value with the IP parameter it represents. Use each parameter once.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Default gateway",
+          "explanation": "The normal next-hop router for destinations outside locally known routes."
+        },
+        {
+          "id": "B",
+          "text": "IPv4 address",
+          "explanation": "The address assigned to the client interface."
+        },
+        {
+          "id": "C",
+          "text": "DNS resolver",
+          "explanation": "The configured service consulted for name resolution."
+        },
+        {
+          "id": "D",
+          "text": "Subnet mask",
+          "explanation": "The bit boundary used to distinguish the local prefix and host portion."
+        }
+      ],
+      "answer": [],
+      "pairs": [
+        {
+          "id": "1",
+          "text": "Client interface: 192.168.9.34",
+          "answer": "B"
+        },
+        {
+          "id": "2",
+          "text": "Mask: 255.255.255.224",
+          "answer": "D"
+        },
+        {
+          "id": "3",
+          "text": "Router: 192.168.9.33",
+          "answer": "A"
+        },
+        {
+          "id": "4",
+          "text": "Name server: 192.168.9.35",
+          "answer": "C"
+        }
+      ],
+      "explanation": "These parameters answer different questions: who the interface is, which network is local, where remote packets go, and how names are resolved.",
+      "references": [
+        {
+          "title": "ipconfig",
+          "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig",
+          "section": "Syntax; Parameters (/all)"
+        },
+        {
+          "title": "Change TCP/IP settings on Mac",
+          "url": "https://support.apple.com/en-hk/guide/mac-help/mh14129/mac",
+          "section": "IP address, subnet mask, and router settings"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-021",
+      "domain": 2,
+      "objectives": [
+        "2.1.a"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "An access switch must place a phone’s tagged voice in VLAN 260 and its attached PC’s untagged data in VLAN 160. Both VLANs exist and the phone supports the configured advertisement method. Which TWO interface commands implement the assignments? Select TWO.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "switchport trunk native vlan 260",
+          "explanation": "A trunk native command is not the intended access-plus-voice assignment."
+        },
+        {
+          "id": "B",
+          "text": "switchport access vlan 260",
+          "explanation": "This places untagged PC traffic in the voice VLAN instead of VLAN 160."
+        },
+        {
+          "id": "C",
+          "text": "switchport voice vlan 260",
+          "explanation": "This advertises and supports the separate tagged voice VLAN."
+        },
+        {
+          "id": "D",
+          "text": "switchport access vlan 160",
+          "explanation": "This sets the untagged data membership."
+        }
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "explanation": "An access port can support separate data and voice treatment. Keep the PC’s access membership distinct from the phone’s voice VLAN.",
+      "references": [
+        {
+          "title": "VLAN Configuration Guide, Cisco IOS XE 17.15.x — Configuring Voice VLANs",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/vlan/b_1715_vlan_9300_cg/configuring_voice_vlans.html",
+          "section": "Cisco IP Phone Voice Traffic; Cisco IP Phone Data Traffic"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-022",
+      "domain": 2,
+      "objectives": [
+        "2.1.c"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "Host A in VLAN 16 can reach Host B in VLAN 26. Both use their switch’s SVIs as gateways. When A sends a packet to B, which destination MAC does A use in its initial Ethernet frame?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "B’s MAC learned by broadcasting directly across both VLANs",
+          "explanation": "ARP for a local neighbor does not automatically cross the VLAN routing boundary."
+        },
+        {
+          "id": "B",
+          "text": "The native VLAN ID encoded as a MAC address",
+          "explanation": "A VLAN number is not an Ethernet destination address."
+        },
+        {
+          "id": "C",
+          "text": "The broadcast MAC for every routed data packet",
+          "explanation": "Only resolution exchanges use broadcasts; ordinary routed unicast uses the gateway MAC."
+        },
+        {
+          "id": "D",
+          "text": "The MAC of A’s VLAN 16 gateway",
+          "explanation": "A sends off-subnet traffic to its local router attachment, which then routes it."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Inter-VLAN routing is a Layer 3 hop. The source host first sends its packet inside a frame addressed to its own local gateway.",
+      "references": [
+        {
+          "title": "Configure Inter-VLAN Routing with Catalyst Switches",
+          "url": "https://www.cisco.com/c/en/us/support/docs/lan-switching/inter-vlan-routing/41260-189.html",
+          "section": "Configure; Troubleshoot"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-023",
+      "domain": 2,
+      "objectives": [
+        "2.1.b",
+        "2.2.c"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A trunk’s native VLAN is changed from 1 to 300 at both ends, with other port settings left untouched. What happens to unrelated access ports that still have the default access VLAN?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "They cease to belong to any VLAN.",
+          "explanation": "Their unchanged default membership still exists."
+        },
+        {
+          "id": "B",
+          "text": "They become VLAN 300 trunks.",
+          "explanation": "Neither their mode nor membership is changed by this action."
+        },
+        {
+          "id": "C",
+          "text": "They all move to VLAN 300.",
+          "explanation": "A trunk native change does not rewrite other ports’ access settings."
+        },
+        {
+          "id": "D",
+          "text": "They remain assigned to VLAN 1.",
+          "explanation": "Access membership is separate from the native VLAN configured on another interface."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Default access VLAN and trunk native VLAN are separate concepts. Changing one trunk property does not migrate endpoint ports.",
+      "references": [
+        {
+          "title": "VLAN Configuration Guide, Cisco IOS XE 17.15.x — Configuring VLAN Trunks",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/vlan/b_1715_vlan_9300_cg/configuring_vlan_trunks.html",
+          "section": "Allowed VLANs on a Trunk; Configuring the Native VLAN for Untagged Traffic"
+        },
+        {
+          "title": "VLAN Configuration Guide, Cisco IOS XE 17.15.x — Configuring VLANs",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/vlan/b_1715_vlan_9300_cg/configuring_vlans.html",
+          "section": "Supported VLANs; Deleting a VLAN; VLAN Port Membership Modes"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-024",
+      "domain": 2,
+      "objectives": [
+        "2.2.a"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An interswitch link has the output below. A technician wants proof that VLAN 62 user data is forwarding over this particular link. What additional issue must be checked?",
+      "exhibit": {
+        "kind": "code",
+        "content": "Status: trunking\nVlans allowed on trunk: 12,62\nVlans allowed and active in management domain: 12,62\nVlans in spanning tree forwarding state and not pruned: 12"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "Whether VLAN 62 is beyond 4094",
+          "explanation": "VLAN 62 is a valid ordinary VLAN number."
+        },
+        {
+          "id": "B",
+          "text": "Whether the trunk’s administrative mode is access",
+          "explanation": "The link is already reported as trunking."
+        },
+        {
+          "id": "C",
+          "text": "Why VLAN 62 is absent from the forwarding-and-not-pruned list",
+          "explanation": "Allowed and active VLANs need not currently forward on every redundant trunk."
+        },
+        {
+          "id": "D",
+          "text": "Whether the physical interface has a host IP address",
+          "explanation": "A Layer 2 trunk does not need its own host IP to carry VLAN traffic."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "The final trunk summary list is operational evidence. Inspect spanning tree and pruning for VLAN 62 before declaring this path available.",
+      "references": [
+        {
+          "title": "VLAN Configuration Guide, Cisco IOS XE 17.15.x — Configuring VLAN Trunks",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/vlan/b_1715_vlan_9300_cg/configuring_vlan_trunks.html",
+          "section": "Allowed VLANs on a Trunk; Configuring the Native VLAN for Untagged Traffic"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-025",
+      "domain": 2,
+      "objectives": [
+        "2.2.a",
+        "2.2.b"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A non-Cisco peer expects a static 802.1Q trunk and does not participate in DTP. Which Cisco-side configuration expresses that requirement without sending DTP?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "channel-group 1 mode active only",
+          "explanation": "LACP aggregation does not itself select the intended trunk configuration."
+        },
+        {
+          "id": "B",
+          "text": "switchport mode access; switchport nonegotiate",
+          "explanation": "Suppressing DTP does not turn an access interface into a trunk."
+        },
+        {
+          "id": "C",
+          "text": "switchport mode dynamic auto only",
+          "explanation": "A passive dynamic configuration relies on a compatible initiating peer."
+        },
+        {
+          "id": "D",
+          "text": "switchport mode trunk; switchport nonegotiate",
+          "explanation": "Static trunk mode plus suppressed negotiation matches a peer that does not use DTP."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Select trunk operation explicitly when the peer will not negotiate. DTP suppression controls negotiation messages, not the data tagging mechanism.",
+      "references": [
+        {
+          "title": "VLAN Configuration Guide, Cisco IOS XE 17.15.x — Configuring VLAN Trunks",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/vlan/b_1715_vlan_9300_cg/configuring_vlan_trunks.html",
+          "section": "Allowed VLANs on a Trunk; Configuring the Native VLAN for Untagged Traffic"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-026",
+      "domain": 2,
+      "objectives": [
+        "2.3"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A neighboring IP phone supports LLDP-MED. The engineer wants the switch to advertise the phone’s voice VLAN and QoS policy without manually configuring those values on every phone. Which LLDP-MED information is relevant?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Network-policy TLV",
+          "explanation": "This can advertise application VLAN, tagging, and priority policy to the endpoint."
+        },
+        {
+          "id": "B",
+          "text": "An OSPF router-LSA",
+          "explanation": "OSPF routing information does not configure a phone’s LLDP-MED policy."
+        },
+        {
+          "id": "C",
+          "text": "The spanning-tree root bridge’s MAC address only",
+          "explanation": "Root election identity is unrelated to the phone application policy."
+        },
+        {
+          "id": "D",
+          "text": "A DHCP lease timer interpreted as a VLAN tag",
+          "explanation": "A timer is not the LLDP-MED network-policy advertisement."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "LLDP-MED extends neighbor discovery with endpoint-specific policy information. The endpoint and switch must support the advertised policy.",
+      "references": [
+        {
+          "title": "Interface and Hardware Components Configuration Guide, Cisco IOS XE 17.15.x — Configuring LLDP, LLDP-MED, and Wired Location Service",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/int_hw/b_1715_int_and_hw_9300_cg/configuring_lldp__lldp_med__and_wired_location_service.html",
+          "section": "LLDP; Enabling LLDP; Monitoring and Maintaining LLDP, LLDP-MED, and Wired Location Service"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-027",
+      "domain": 2,
+      "objectives": [
+        "2.4"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "A two-switch LACP installation has one active end and one passive end. A review proposes changing the passive end to active while retaining compatible member settings. Which TWO statements are correct? Select TWO.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The change does not double each member’s physical line rate.",
+          "explanation": "Negotiation mode does not alter the Ethernet PHY’s speed."
+        },
+        {
+          "id": "B",
+          "text": "LACP requires exactly one passive endpoint.",
+          "explanation": "At least one active endpoint is required; a passive endpoint is not mandatory."
+        },
+        {
+          "id": "C",
+          "text": "Two active ends necessarily create a Layer 2 loop.",
+          "explanation": "LACP can negotiate one logical bundle with both ends active."
+        },
+        {
+          "id": "D",
+          "text": "Active/active is a valid LACP combination.",
+          "explanation": "Both ends may initiate LACP negotiation."
+        }
+      ],
+      "answer": [
+        "A",
+        "D"
+      ],
+      "explanation": "The active/passive choice governs initiation of negotiation. It does not determine physical link speed or require opposite modes.",
+      "references": [
+        {
+          "title": "Layer 2 Configuration Guide, Cisco IOS XE 17.15.x — Configuring EtherChannels",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/lyr2/b_1715_lyr2_9300_cg/configuring_etherchannels.html",
+          "section": "LACP Modes; EtherChannel Configuration Guidelines; Load Balancing; Layer 3 EtherChannels; Hot-Standby Ports"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-028",
+      "domain": 2,
+      "objectives": [
+        "2.4"
+      ],
+      "type": "single",
+      "difficulty": "Challenge",
+      "prompt": "A Catalyst LACP channel has a configured maximum of two active members. Its summary shows Gi1/0/1(P), Gi1/0/2(P), and Gi1/0/3(H). The legend defines H as hot standby. Which action is justified solely by that evidence?",
+      "exhibit": {
+        "kind": "code",
+        "content": "interface Port-channel11\n lacp max-bundle 2\n\nGroup  Port-channel  Protocol  Ports\n11     Po11(SU)      LACP      Gi1/0/1(P) Gi1/0/2(P) Gi1/0/3(H)"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "Disable LACP because it supports only two configured members.",
+          "explanation": "More configured members may exist than the active maximum."
+        },
+        {
+          "id": "B",
+          "text": "Treat Gi1/0/3 as forwarding an equal share of current traffic.",
+          "explanation": "Hot standby is not an active bundled forwarding member."
+        },
+        {
+          "id": "C",
+          "text": "Add VLAN 3 to make port 3 active.",
+          "explanation": "Its standby role follows the active-member limit, not its interface number."
+        },
+        {
+          "id": "D",
+          "text": "Recognize Gi1/0/3 as a standby member rather than immediately replacing its cable.",
+          "explanation": "The explicit maximum and H state explain why the compatible member is not active."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Interpret standby state in the context of the configured bundle limit. Not every nonforwarding member represents a physical fault.",
+      "references": [
+        {
+          "title": "Layer 2 Configuration Guide, Cisco IOS XE 17.15.x — Configuring EtherChannels",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/lyr2/b_1715_lyr2_9300_cg/configuring_etherchannels.html",
+          "section": "LACP Modes; EtherChannel Configuration Guidelines; Load Balancing; Layer 3 EtherChannels; Hot-Standby Ports"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-029",
+      "domain": 2,
+      "objectives": [
+        "2.5.a"
+      ],
+      "type": "single",
+      "difficulty": "Foundation",
+      "prompt": "A Catalyst switch displays bridge priority 32828 for VLAN 60 with the extended system ID enabled. Which configured base priority does this represent?",
+      "exhibit": {
+        "kind": "code",
+        "content": "Bridge ID Priority 32828 (priority 32768 sys-id-ext 60)"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "32768",
+          "explanation": "The displayed priority includes the VLAN ID: 32768 + 60 = 32828."
+        },
+        {
+          "id": "B",
+          "text": "4096",
+          "explanation": "4096 is a permitted priority increment but does not produce the displayed value."
+        },
+        {
+          "id": "C",
+          "text": "60",
+          "explanation": "The VLAN ID supplies the extension, not the whole base priority."
+        },
+        {
+          "id": "D",
+          "text": "32828",
+          "explanation": "That is the combined value, not the configurable base priority."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Rapid PVST+ incorporates the VLAN ID into the bridge priority field. Separate the configurable base priority from the extended system ID.",
+      "references": [
+        {
+          "title": "Layer 2 Configuration Guide, Cisco IOS XE 17.15.x — Configuring Spanning Tree Protocol",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/lyr2/b_1715_lyr2_9300_cg/configuring_spanning_tree_protocol.html",
+          "section": "Spanning-Tree Topology and Bridge Protocol Data Units; Bridge ID, Device Priority, and Extended System ID; (Optional) Configuring a Secondary Root Device"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-030",
+      "domain": 2,
+      "objectives": [
+        "2.5.a",
+        "2.5.b"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A converged root bridge has three normal point-to-point links, each to a different downstream switch. There are no shared segments, parallel self-loops, or guard inconsistencies. Which statement is true for this VLAN?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Every port must be alternate because root traffic is special.",
+          "explanation": "Its normal downstream ports provide designated paths."
+        },
+        {
+          "id": "B",
+          "text": "Only one of its three downstream links may ever forward.",
+          "explanation": "Independent downstream segments can each have a designated forwarding port."
+        },
+        {
+          "id": "C",
+          "text": "It selects the lowest numbered downstream link as its root port.",
+          "explanation": "The root bridge does not require a root port."
+        },
+        {
+          "id": "D",
+          "text": "It has no root port; these downstream ports are designated.",
+          "explanation": "The root has no upstream path to itself and offers the best root information on these links."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Root-port selection applies to nonroot switches. On the root, these ordinary downstream segments are served by designated ports.",
+      "references": [
+        {
+          "title": "Understand Rapid Spanning Tree Protocol (802.1w)",
+          "url": "https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/24062-146.html",
+          "section": "New Port States and Port Roles — Port States; Alternate and Backup Port Roles"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-031",
+      "domain": 2,
+      "objectives": [
+        "2.5.c"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A hypervisor attaches through a trunk carrying several guest VLANs. The design verifies that this host does not bridge to another physical switch and needs edge startup behavior. What is the careful PortFast interpretation?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "PortFast can apply to a genuine edge trunk when explicitly configured for that role.",
+          "explanation": "Edge status is about topology, not a rule that all trunks connect switches."
+        },
+        {
+          "id": "B",
+          "text": "PortFast proves that the host can never create a loop.",
+          "explanation": "Configuration expresses an assumption; it does not prove future host behavior."
+        },
+        {
+          "id": "C",
+          "text": "PortFast turns off every VLAN on that trunk.",
+          "explanation": "It changes spanning-tree edge transition behavior, not VLAN admission."
+        },
+        {
+          "id": "D",
+          "text": "PortFast is impossible on any trunk.",
+          "explanation": "Cisco supports explicit edge behavior for suitable trunk attachments."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "A trunk can terminate at an edge device. Verify the absence of Layer 2 forwarding paths through the host before applying edge treatment.",
+      "references": [
+        {
+          "title": "Layer 2 Configuration Guide, Cisco IOS XE 17.15.x — Configuring Optional Spanning-Tree Features",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/lyr2/b_1715_lyr2_9300_cg/configuring_optional_spanning_tree_features.html",
+          "section": "PortFast; Bridge Protocol Data Unit Guard; Bridge Protocol Data Unit Filtering; Root Guard; Loop Guard"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-032",
+      "domain": 2,
+      "objectives": [
+        "2.5.d"
+      ],
+      "type": "single",
+      "difficulty": "Challenge",
+      "prompt": "A change review finds spanning-tree bpdufilter enable explicitly configured on both ends of a new redundant switch link. Why is that unsafe?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "BPDU filtering encrypts BPDUs so peers cannot decrypt them.",
+          "explanation": "The feature suppresses processing and transmission; it does not encrypt."
+        },
+        {
+          "id": "B",
+          "text": "Filtering makes LACP incompatible with every port-channel.",
+          "explanation": "The identified risk is hidden Layer 2 loops, not a blanket LACP prohibition."
+        },
+        {
+          "id": "C",
+          "text": "The feature automatically rejects every tagged data frame.",
+          "explanation": "Its purpose concerns BPDUs, not all user VLAN tags."
+        },
+        {
+          "id": "D",
+          "text": "The link can forward without exchanging the BPDUs needed to detect its loop contribution.",
+          "explanation": "Unconditional interface filtering defeats spanning-tree visibility on that path."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "A redundant physical path needs functioning loop prevention. Explicit interface BPDU filtering can remove the information that spanning tree relies on.",
+      "references": [
+        {
+          "title": "Layer 2 Configuration Guide, Cisco IOS XE 17.15.x — Configuring Optional Spanning-Tree Features",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-15/configuration_guide/lyr2/b_1715_lyr2_9300_cg/configuring_optional_spanning_tree_features.html",
+          "section": "PortFast; Bridge Protocol Data Unit Guard; Bridge Protocol Data Unit Filtering; Root Guard; Loop Guard"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-033",
+      "domain": 2,
+      "objectives": [
+        "2.6"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A branch AP locally switches employee traffic but centrally switches a guest WLAN to the WLC. Must these WLANs use different physical APs because their data paths differ?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Yes; the guest SSID requires sniffer mode.",
+          "explanation": "Sniffer mode is a capture role, not guest service."
+        },
+        {
+          "id": "B",
+          "text": "No; because centrally switched traffic bypasses the WLC.",
+          "explanation": "By definition, that selected client data path reaches the controller."
+        },
+        {
+          "id": "C",
+          "text": "Yes; FlexConnect forces every WLAN to use the same local path.",
+          "explanation": "FlexConnect can support both selected central and local switching."
+        },
+        {
+          "id": "D",
+          "text": "No; a FlexConnect AP can use the configured switching behavior for each WLAN.",
+          "explanation": "Local versus central forwarding can be selected per WLAN in the supported design."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Choose switching behavior per WLAN according to its policy and location. One capable FlexConnect AP can implement the mixed design.",
+      "references": [
+        {
+          "title": "Cisco Wireless Controller Configuration Guide, Release 8.10 — FlexConnect",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-10/config-guide/b_cg810/flexconnect.html",
+          "section": "Configuring the Switch at a Remote Site; Configuring an Access Point for FlexConnect (GUI)"
+        },
+        {
+          "title": "Cisco Wireless Controller Configuration Guide, Release 8.5 — Managing APs",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-5/config-guide/b_cg85/managing_aps.html",
+          "section": "AP Modes: client-serving and network management modes"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-034",
+      "domain": 2,
+      "objectives": [
+        "2.6"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A remote site has functioning LAN and Internet connectivity, but access to its cloud management dashboard is interrupted. For Meraki bridge-mode WLANs with no additional cloud-dependent authentication service, which effect follows directly from loss of management access?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "All local SSIDs become unencrypted.",
+          "explanation": "A management outage does not automatically remove the applied security policy."
+        },
+        {
+          "id": "B",
+          "text": "Every local client frame must stop because it was passing through the dashboard.",
+          "explanation": "Ordinary bridge-mode client data does not transit the management dashboard."
+        },
+        {
+          "id": "C",
+          "text": "New cloud configuration and monitoring are impaired, while existing local forwarding can continue.",
+          "explanation": "The management outage does not inherently remove the bridge-mode local data path."
+        },
+        {
+          "id": "D",
+          "text": "The AP changes automatically into an autonomous Cisco IOS router.",
+          "explanation": "Loss of dashboard reachability does not change it into that product architecture."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Evaluate management and forwarding dependencies separately. The stated design excludes extra cloud authentication dependencies that could change client admission behavior.",
+      "references": [
+        {
+          "title": "Meraki Cloud Architecture",
+          "url": "https://documentation.meraki.com/Platform_Management/Dashboard_Administration/Design_and_Configure/Architectures_and_Best_Practices/Cisco_Meraki_Best_Practice_Design/Meraki_Cloud_Architecture",
+          "section": "Network and Management Data Segregation; The Meraki dashboard"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-035",
+      "domain": 2,
+      "objectives": [
+        "2.7"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A campus extends centrally switched client VLANs to the WLC but does not permit the AP management subnet to reach the controller. AP switch ports and power are healthy. What infrastructure requirement is still unmet?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The WLAN name must equal the AP management VLAN number.",
+          "explanation": "SSID strings do not establish network reachability."
+        },
+        {
+          "id": "B",
+          "text": "Every AP needs the WLC service port connected directly to its radio.",
+          "explanation": "Service ports are not per-AP tunnel cables."
+        },
+        {
+          "id": "C",
+          "text": "The AP needs its own working IP path to establish controller connectivity.",
+          "explanation": "Client VLAN presence at the WLC does not supply AP management transport."
+        },
+        {
+          "id": "D",
+          "text": "Client VLANs must be removed from the WLC uplink.",
+          "explanation": "Removing the data attachment would not repair the AP’s control path."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Build and verify AP-to-controller connectivity independently of the wired client VLANs. Both are needed in a centrally switched deployment.",
+      "references": [
+        {
+          "title": "Cisco Wireless Controller Configuration Guide, Release 8.10 — AP Connectivity to Controller",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-10/config-guide/b_cg810/ap_connectivity_to_cisco_wlc.html",
+          "section": "CAPWAP"
+        },
+        {
+          "title": "Cisco Wireless Controller Configuration Guide, Release 8.10 — Ports and Interfaces",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-10/config-guide/b_cg810/ports_and_interfaces.html",
+          "section": "Restrictions on Link Aggregation; Configuring Neighbor Devices to Support Link Aggregation"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-036",
+      "domain": 2,
+      "objectives": [
+        "2.7"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A WLC LAG uses four physical links to one access switch. A design review claims the controller remains connected if that entire switch fails. What is wrong with the claim?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "LAG replicates the access switch’s control plane inside the WLC.",
+          "explanation": "It does not create a replacement switching device."
+        },
+        {
+          "id": "B",
+          "text": "Changing VLAN names automatically removes the shared dependency.",
+          "explanation": "Logical names do not change the physical attachment."
+        },
+        {
+          "id": "C",
+          "text": "Four links guarantee four independent network paths.",
+          "explanation": "Link count alone does not establish independent failure domains."
+        },
+        {
+          "id": "D",
+          "text": "All four links share the same failed switch as a common dependency.",
+          "explanation": "Multiple cables protect member failures but not loss of their single termination device."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Link redundancy and device independence are different. Assess the whole path, including the shared switch and controller, when describing availability.",
+      "references": [
+        {
+          "title": "Cisco Wireless Controller Configuration Guide, Release 8.10 — Ports and Interfaces",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-10/config-guide/b_cg810/ports_and_interfaces.html",
+          "section": "Restrictions on Link Aggregation; Configuring Neighbor Devices to Support Link Aggregation"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-037",
+      "domain": 2,
+      "objectives": [
+        "2.8"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A remote engineer needs to know who entered configuration commands on a Catalyst 9300 switch running IOS XE 17.13 after a change window. Which configured management capability directly supplies that record?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Changing all administrators to one shared account",
+          "explanation": "A shared identity weakens attribution instead of providing individual records."
+        },
+        {
+          "id": "B",
+          "text": "Centralized TACACS+ command accounting for the relevant privilege levels",
+          "explanation": "Configured command accounting records command activity and the associated username at the accounting server."
+        },
+        {
+          "id": "C",
+          "text": "LLDP neighbor capability advertisements",
+          "explanation": "LLDP describes neighbors, not operator configuration actions."
+        },
+        {
+          "id": "D",
+          "text": "The presence of an HTTPS padlock alone",
+          "explanation": "TLS protects a session but does not by itself create command accounting records."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "An encrypted session is not an audit trail by itself. Configure appropriate accounting and identifiable administrator credentials.",
+      "references": [
+        {
+          "title": "Security Configuration Guide, Cisco IOS XE 17.13.x (Catalyst 9300 Switches) — Configuring Accounting",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9300/software/release/17-13/configuration_guide/sec/b_1713_sec_9300_cg/configuring_accounting.html",
+          "section": "AAA Accounting Types — Command Accounting"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-038",
+      "domain": 2,
+      "objectives": [
+        "2.9"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "A Catalyst 9800 policy profile for a branch WLAN shows Central Switching enabled. The requirement is local client switching, and Central Association is already disabled. Which TWO checks complete the intended setup? Select TWO.",
+      "exhibit": {
+        "kind": "table",
+        "headers": [
+          "Object",
+          "Current state"
+        ],
+        "rows": [
+          [
+            "AP mode",
+            "FlexConnect"
+          ],
+          [
+            "Central Association",
+            "Disabled"
+          ],
+          [
+            "Policy Profile Central Switching",
+            "Enabled"
+          ],
+          [
+            "Requested client data path",
+            "Local branch VLAN"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "Verify the AP’s assigned policy tag maps this WLAN to that profile.",
+          "explanation": "An unreferenced profile does not apply to the serving AP’s WLAN."
+        },
+        {
+          "id": "B",
+          "text": "Keep the profile unused and change only its description.",
+          "explanation": "Descriptions do not bind a WLAN to a forwarding policy."
+        },
+        {
+          "id": "C",
+          "text": "Disable Central Switching in the relevant policy profile.",
+          "explanation": "This selects local client data forwarding for the FlexConnect WLAN."
+        },
+        {
+          "id": "D",
+          "text": "Enable dedicated monitor mode on the AP.",
+          "explanation": "That would remove ordinary client service rather than implement local switching."
+        }
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "explanation": "A profile’s values matter only when the correct WLAN and AP bindings use it. The FlexConnect site and switch VLAN settings must also be compatible.",
+      "references": [
+        {
+          "title": "Configure FlexConnect with Authentication on Catalyst 9800 WLC",
+          "url": "https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/213921-flexconnect-configuration-with-central-a.html",
+          "section": "Background Information; Policy Profile Configuration"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-039",
+      "domain": 2,
+      "objectives": [
+        "2.9"
+      ],
+      "type": "matching",
+      "difficulty": "Applied",
+      "prompt": "Match each applied AireOS QoS profile to the standard service class it represents. The profiles have not been customized; use each answer once.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Silver",
+          "explanation": "The standard profile associated with best effort."
+        },
+        {
+          "id": "B",
+          "text": "Platinum",
+          "explanation": "The standard profile associated with voice."
+        },
+        {
+          "id": "C",
+          "text": "Gold",
+          "explanation": "The standard profile associated with video."
+        },
+        {
+          "id": "D",
+          "text": "Bronze",
+          "explanation": "The standard profile associated with background traffic."
+        }
+      ],
+      "answer": [],
+      "explanation": "These profile names summarize intended service classes. Selecting a profile does not guarantee end-to-end performance under every load.",
+      "references": [
+        {
+          "title": "Cisco Wireless Controller Configuration Guide, Release 8.10 — Wireless Quality of Service",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-10/config-guide/b_cg810/wireless_quality_of_service.html",
+          "section": "QoS Profiles; Configuring QoS Profiles (GUI); Assigning a QoS Profile to a WLAN (GUI)"
+        }
+      ],
+      "pairs": [
+        {
+          "id": "1",
+          "text": "Voice handset WLAN",
+          "answer": "B"
+        },
+        {
+          "id": "2",
+          "text": "Interactive video WLAN",
+          "answer": "C"
+        },
+        {
+          "id": "3",
+          "text": "Ordinary best-effort employee WLAN",
+          "answer": "A"
+        },
+        {
+          "id": "4",
+          "text": "Background transfer WLAN",
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-040",
+      "domain": 2,
+      "objectives": [
+        "2.9"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A Catalyst 9800 GUI shows a WLAN mapped to policy profile Guest-Local in the policy tag assigned to AP-9. The engineer edits the unused profile Guest-Test instead. Why do AP-9 clients retain their existing VLAN?",
+      "exhibit": {
+        "kind": "table",
+        "headers": [
+          "Configuration object",
+          "Value"
+        ],
+        "rows": [
+          [
+            "AP-9 Policy Tag",
+            "Branch-East"
+          ],
+          [
+            "Branch-East WLAN mapping",
+            "Guest → Guest-Local"
+          ],
+          [
+            "Guest-Local VLAN",
+            "210"
+          ],
+          [
+            "Edited profile",
+            "Guest-Test VLAN 220"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "All profiles with Guest in their names are automatically merged.",
+          "explanation": "Profile names do not imply automatic policy merging."
+        },
+        {
+          "id": "B",
+          "text": "AP-9’s WLAN still references Guest-Local, so the edited profile is not on its effective configuration path.",
+          "explanation": "The active policy-tag mapping determines which profile applies."
+        },
+        {
+          "id": "C",
+          "text": "VLAN changes require a new radio frequency by definition.",
+          "explanation": "Wired VLAN policy does not inherently require changing RF channels."
+        },
+        {
+          "id": "D",
+          "text": "Policy profiles only control the administrator’s browser theme.",
+          "explanation": "They include client network and forwarding policies."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Trace the applied object relationships before changing a value. Editing an unused object cannot change the client policy used by this AP.",
+      "references": [
+        {
+          "title": "Configure FlexConnect with Authentication on Catalyst 9800 WLC",
+          "url": "https://www.cisco.com/c/en/us/support/docs/wireless/catalyst-9800-series-wireless-controllers/213921-flexconnect-configuration-with-central-a.html",
+          "section": "Background Information; Policy Profile Configuration"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-041",
+      "domain": 3,
+      "objectives": [
+        "3.1.b",
+        "3.1.d"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "The routing-table line below is installed. An operator interprets 10.240.12.0 as the adjacent router to ARP for. What is the correction?",
+      "exhibit": {
+        "kind": "code",
+        "content": "O 10.240.12.0/22 [110/25] via 192.0.2.18, GigabitEthernet0/3"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "10.240.12.0/22 is the destination prefix; 192.0.2.18 is the next hop.",
+          "explanation": "The prefix precedes the bracket and the neighbor follows via."
+        },
+        {
+          "id": "B",
+          "text": "The route uses every address in 10.240.0.0/16 as a next hop.",
+          "explanation": "The /22 defines destinations, not a pool of neighboring routers."
+        },
+        {
+          "id": "C",
+          "text": "10.240.12.0 is the local router’s management address.",
+          "explanation": "The entry does not identify that address as locally owned."
+        },
+        {
+          "id": "D",
+          "text": "192.0.2.18 is the subnet mask in decimal form.",
+          "explanation": "The next-hop address is not a mask."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "The destination describes what traffic a route covers; the next hop describes where that traffic goes next. Confusing them leads to incorrect neighbor-resolution troubleshooting.",
+      "references": [
+        {
+          "title": "Configure Route Selection for Routers",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8651-21.html",
+          "section": "Build the Routing Table; Make Forwarding Decisions"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-042",
+      "domain": 3,
+      "objectives": [
+        "3.1.e",
+        "3.2.b"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A static route to a warehouse is changed from distance 1 to 130. OSPF offers the same exact prefix at distance 110. All paths work. Which verification outcome confirms the intended switch to OSPF?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "All broader prefixes disappear from the RIB.",
+          "explanation": "Different destination prefixes can remain independently installed."
+        },
+        {
+          "id": "B",
+          "text": "The main routing table now shows the OSPF candidate for that prefix.",
+          "explanation": "110 is preferable to the revised static distance 130."
+        },
+        {
+          "id": "C",
+          "text": "OSPF’s advertised metric changes to 130 on every neighbor.",
+          "explanation": "A local static distance change is not a distributed OSPF metric update."
+        },
+        {
+          "id": "D",
+          "text": "The static command disappears automatically from running-config.",
+          "explanation": "A losing static candidate can remain configured."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Changing local route preference can alter installed ownership without deleting the backup configuration. Inspect the live route for the exact destination prefix.",
+      "references": [
+        {
+          "title": "Understand Administrative Distance",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html",
+          "section": "RIB Route Comparison; Route Installation; Default AD Values"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-043",
+      "domain": 3,
+      "objectives": [
+        "3.2.a"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "Two installed IPv6 routes are shown. A packet targets 2001:db8:abcd:1234::7. Which interpretation is correct?",
+      "exhibit": {
+        "kind": "code",
+        "content": "S 2001:db8:abcd::/48 [1/0] via 2001:db8:1::2\nS 2001:db8:abcd:1234::/64 [200/0] via 2001:db8:2::2"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "Neither matches because ::7 is not written in either prefix.",
+          "explanation": "Host bits need not be zero in a packet destination to match a network prefix."
+        },
+        {
+          "id": "B",
+          "text": "The /64 through 2001:db8:2::2 handles this destination.",
+          "explanation": "The entire first four hextets match that more specific installed prefix."
+        },
+        {
+          "id": "C",
+          "text": "The /48 wins because its administrative distance is lower.",
+          "explanation": "Distance does not override specificity between installed prefixes."
+        },
+        {
+          "id": "D",
+          "text": "Both routes match equally because IPv6 ignores the fourth hextet.",
+          "explanation": "The fourth hextet contributes to a /64 match."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "IPv6 uses longest-prefix forwarding just as IPv4 does. Matching the variable host portion is not required for a network route.",
+      "references": [
+        {
+          "title": "IPv6 Routing: Static Routing — Cisco IOS XE 17.x",
+          "url": "https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-routing/b-ip-routing/m_ip6-route-static-xe.html",
+          "section": "Recursive Static Routes; Fully Specified Static Routes; Floating Static Routes"
+        },
+        {
+          "title": "Configure Route Selection for Routers",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8651-21.html",
+          "section": "Build the Routing Table; Make Forwarding Decisions"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-044",
+      "domain": 3,
+      "objectives": [
+        "3.2.c"
+      ],
+      "type": "single",
+      "difficulty": "Foundation",
+      "prompt": "An operator compares two OSPF intra-area paths: one uses a fast but long-distance fiber circuit, the other a slower short circuit. Only interface costs are supplied. What determines the OSPF choice by default?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The lower sum of configured or calculated OSPF costs",
+          "explanation": "Ordinary intra-area SPF uses accumulated link cost."
+        },
+        {
+          "id": "B",
+          "text": "The path whose next-hop address has fewer digits",
+          "explanation": "Address spelling is unrelated to route cost."
+        },
+        {
+          "id": "C",
+          "text": "The path with the geographically closest next hop",
+          "explanation": "Geographic distance is not the default SPF metric."
+        },
+        {
+          "id": "D",
+          "text": "The lower measured application response time",
+          "explanation": "OSPF does not automatically substitute live application latency for link costs."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "A routing metric is a configured model of preference, not a direct guarantee of every performance measure. Validate latency separately if it is a service requirement.",
+      "references": [
+        {
+          "title": "RFC 2328: OSPF Version 2",
+          "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+          "section": "9.4 Electing the Designated Router; 10 The Neighbor Data Structure; 16 Calculation of the routing table"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-045",
+      "domain": 3,
+      "objectives": [
+        "3.1.g",
+        "3.2.a"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "A branch can reach every corporate /24 in its routing table but no other IPv4 network. Which two pieces of evidence would support a missing-default diagnosis? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The OSPF process number differs from the hub’s.",
+          "explanation": "Locally different process numbers do not explain missing external coverage."
+        },
+        {
+          "id": "B",
+          "text": "One connected subnet has mask /30.",
+          "explanation": "A /30 transit is compatible with perfectly functional default routing."
+        },
+        {
+          "id": "C",
+          "text": "The intended external destination matches none of the installed specific routes.",
+          "explanation": "That destination would require a fallback route in this design."
+        },
+        {
+          "id": "D",
+          "text": "show ip route reports no gateway of last resort and no installed default.",
+          "explanation": "The necessary fallback is absent from the operational table."
+        }
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "explanation": "Combine destination coverage with observed route state. A symptom alone cannot distinguish missing default from a failed remote service.",
+      "references": [
+        {
+          "title": "Configure Route Selection for Routers",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8651-21.html",
+          "section": "Build the Routing Table; Make Forwarding Decisions"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-046",
+      "domain": 3,
+      "objectives": [
+        "3.3.b"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A warehouse router must summarize exactly 10.88.12.0/24, 10.88.13.0/24, 10.88.14.0/24 and 10.88.15.0/24 into one static route. Which destination and mask are correct?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "10.88.8.0 255.255.248.0",
+          "explanation": "The /21 additionally includes third octets 8–11."
+        },
+        {
+          "id": "B",
+          "text": "10.88.12.0 255.255.254.0",
+          "explanation": "A /23 covers only third octets 12–13."
+        },
+        {
+          "id": "C",
+          "text": "10.88.0.0 255.255.0.0",
+          "explanation": "The /16 includes many networks outside the stated requirement."
+        },
+        {
+          "id": "D",
+          "text": "10.88.12.0 255.255.252.0",
+          "explanation": "The aligned /22 spans exactly third octets 12–15."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Choose both an aligned network boundary and sufficient prefix length. Four contiguous /24s collapse exactly here because 12 is aligned to a four-block boundary.",
+      "references": [
+        {
+          "title": "RFC 1812: Requirements for IP Version 4 Routers",
+          "url": "https://www.rfc-editor.org/rfc/rfc1812.html",
+          "section": "5.2.4 Determining the Next Hop Address"
+        },
+        {
+          "title": "Configure a Next Hop IP Address for Static Routes",
+          "url": "https://www.cisco.com/c/en/us/support/docs/dial-access/floating-static-route/118263-technote-nexthop-00.html",
+          "section": "Background Information; Floating Static Route Example"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-047",
+      "domain": 3,
+      "objectives": [
+        "3.3.b"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A Cisco IOS router has ip route 10.170.0.0 255.255.0.0 GigabitEthernet0/0. The destination is beyond an Ethernet neighbor that has proxy ARP disabled. Why might the route appear installed while remote traffic fails?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The interface-only route causes ARP attempts for remote destination addresses.",
+          "explanation": "The route treats those destinations as directly attached to the Ethernet exit."
+        },
+        {
+          "id": "B",
+          "text": "Proxy ARP is required for all correctly specified next-hop statics.",
+          "explanation": "A route naming the adjacent router can resolve that router normally without proxying remote hosts."
+        },
+        {
+          "id": "C",
+          "text": "The /16 mask disables Ethernet framing.",
+          "explanation": "Prefix length affects destination scope, not Ethernet frame availability."
+        },
+        {
+          "id": "D",
+          "text": "Every installed static route automatically verifies remote application health.",
+          "explanation": "Route installation does not test application or remote-host delivery."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Interface reachability can be sufficient for this route to install while the implied neighbor model is wrong. Specify the real next hop on a multiaccess transit.",
+      "references": [
+        {
+          "title": "Configure a Next Hop IP Address for Static Routes",
+          "url": "https://www.cisco.com/c/en/us/support/docs/dial-access/floating-static-route/118263-technote-nexthop-00.html",
+          "section": "Background Information; Floating Static Route Example"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-048",
+      "domain": 3,
+      "objectives": [
+        "3.3.c",
+        "3.2.a"
+      ],
+      "type": "single",
+      "difficulty": "Challenge",
+      "prompt": "A router has an installed /24 through the normal exit and a /32 static exception through a maintenance exit. The maintenance next hop becomes unresolved and the /32 is withdrawn. Both paths were ordinary routes without permanent. What happens to that host’s traffic after convergence?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "It is permanently blackholed because a /32 once existed.",
+          "explanation": "A withdrawn route does not remain a forwarding match."
+        },
+        {
+          "id": "B",
+          "text": "It uses the remaining matching /24.",
+          "explanation": "Removing the host exception allows the broader route to become the longest remaining match."
+        },
+        {
+          "id": "C",
+          "text": "It is sent simultaneously to all default gateways.",
+          "explanation": "Ordinary forwarding follows the selected remaining match."
+        },
+        {
+          "id": "D",
+          "text": "It creates a /32 through the normal exit automatically in configuration.",
+          "explanation": "Using a broader route does not generate a new static command."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Fallback depends on which routes remain installed. A removed specific route differs from an installed specific route whose downstream service is broken.",
+      "references": [
+        {
+          "title": "Configure Route Selection for Routers",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/8651-21.html",
+          "section": "Build the Routing Table; Make Forwarding Decisions"
+        },
+        {
+          "title": "Configure a Next Hop IP Address for Static Routes",
+          "url": "https://www.cisco.com/c/en/us/support/docs/dial-access/floating-static-route/118263-technote-nexthop-00.html",
+          "section": "Background Information; Floating Static Route Example"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-049",
+      "domain": 3,
+      "objectives": [
+        "3.3.d"
+      ],
+      "type": "single",
+      "difficulty": "Challenge",
+      "prompt": "A backup next hop is reachable only through the same physical interface as the primary next hop. Both statics depend solely on that interface, with no alternate resolution. What happens if that shared interface goes down?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Only the lower-distance route is affected by interface state.",
+          "explanation": "Both routes rely on the same failed interface."
+        },
+        {
+          "id": "B",
+          "text": "The primary becomes more reliable because the backup has a larger distance.",
+          "explanation": "Distance represents preference, not physical independence."
+        },
+        {
+          "id": "C",
+          "text": "The higher-distance static creates a new physical link.",
+          "explanation": "Administrative preference cannot supply missing hardware connectivity."
+        },
+        {
+          "id": "D",
+          "text": "Both routes can become unusable despite different administrative distances.",
+          "explanation": "The common resolving interface is a shared dependency."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Two configured routes are not necessarily two independent paths. Verify failure domains in addition to preference order.",
+      "references": [
+        {
+          "title": "Configure a Next Hop IP Address for Static Routes",
+          "url": "https://www.cisco.com/c/en/us/support/docs/dial-access/floating-static-route/118263-technote-nexthop-00.html",
+          "section": "Background Information; Floating Static Route Example"
+        },
+        {
+          "title": "Understand Administrative Distance",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html",
+          "section": "RIB Route Comparison; Route Installation; Default AD Values"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-050",
+      "domain": 3,
+      "objectives": [
+        "3.3.b"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A dual-stack link has the same neighbor link-local address FE80::1 reused on two separate interfaces. A static IPv6 route must use the neighbor on GigabitEthernet0/2. Which information resolves the ambiguity?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Use FE80::1/128 as the destination for the remote LAN.",
+          "explanation": "That would describe the neighbor address rather than the remote network."
+        },
+        {
+          "id": "B",
+          "text": "Remove the interface and keep FE80::1 alone.",
+          "explanation": "The link-local value alone cannot distinguish the two links."
+        },
+        {
+          "id": "C",
+          "text": "Raise the next hop’s OSPF priority.",
+          "explanation": "OSPF priority does not select an IPv6 link-local scope."
+        },
+        {
+          "id": "D",
+          "text": "Specify GigabitEthernet0/2 with FE80::1 in the route.",
+          "explanation": "A link-local address is scoped to a link, so the interface identifies the intended neighbor."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Reuse of a link-local value on different links is allowed. The route must carry the link context when that address is the next hop.",
+      "references": [
+        {
+          "title": "IPv6 Routing: Static Routing — Cisco IOS XE 17.x",
+          "url": "https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-routing/b-ip-routing/m_ip6-route-static-xe.html",
+          "section": "Recursive Static Routes; Fully Specified Static Routes; Floating Static Routes"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-051",
+      "domain": 3,
+      "objectives": [
+        "3.3.a",
+        "3.3.d"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "An IPv6 default learned dynamically has distance 95. Which two proposed static defaults would be less preferred while remaining usable as floating alternatives, assuming valid independent next hops? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "A ::/0 static with distance 255",
+          "explanation": "255 prevents installation rather than providing a usable last resort."
+        },
+        {
+          "id": "B",
+          "text": "A ::/0 static with distance 90",
+          "explanation": "90 would be preferred over the dynamic default."
+        },
+        {
+          "id": "C",
+          "text": "A ::/0 static with distance 96",
+          "explanation": "96 is higher than 95 and below the unusable value 255."
+        },
+        {
+          "id": "D",
+          "text": "A ::/0 static with distance 200",
+          "explanation": "200 is a valid less-preferred source distance."
+        }
+      ],
+      "answer": [
+        "C",
+        "D"
+      ],
+      "explanation": "Choose a distance relative to the actual primary, including any configured override. A backup must also remain independently resolvable.",
+      "references": [
+        {
+          "title": "Understand Administrative Distance",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/border-gateway-protocol-bgp/15986-admin-distance.html",
+          "section": "RIB Route Comparison; Route Installation; Default AD Values"
+        },
+        {
+          "title": "IPv6 Routing: Static Routing — Cisco IOS XE 17.x",
+          "url": "https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-routing/b-ip-routing/m_ip6-route-static-xe.html",
+          "section": "Recursive Static Routes; Fully Specified Static Routes; Floating Static Routes"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-052",
+      "domain": 3,
+      "objectives": [
+        "3.4.a"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An OSPF network statement is shown with local interface addresses. Which interfaces does it select for area 0?",
+      "exhibit": {
+        "kind": "code",
+        "content": "router ospf 2\n network 10.6.0.4 0.0.0.3 area 0\n\nGi0/0 10.6.0.4/31\nGi0/1 10.6.0.6/31\nGi0/2 10.6.0.8/31"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "Gi0/2 only",
+          "explanation": "10.6.0.8 is outside the wildcard-selected block."
+        },
+        {
+          "id": "B",
+          "text": "Gi0/0 and Gi0/1",
+          "explanation": "Wildcard 0.0.0.3 matches the address block 10.6.0.4–10.6.0.7."
+        },
+        {
+          "id": "C",
+          "text": "Gi0/0 only because the statement ends in .4",
+          "explanation": "A nonzero wildcard permits variation in the low two bits."
+        },
+        {
+          "id": "D",
+          "text": "Every interface in 10.0.0.0/8",
+          "explanation": "The first 30 address bits are constrained by this statement."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "An OSPF network command selects matching local interface addresses. Its wildcard is not a request to install one remote static prefix.",
+      "references": [
+        {
+          "title": "Configuring OSPF — IP Routing: OSPF Configuration Guide",
+          "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_ospf/configuration/xe-16/iro-xe-16-book/iro-cfg.html",
+          "section": "Enabling OSPF; Configuring OSPF Interface Parameters"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-053",
+      "domain": 3,
+      "objectives": [
+        "3.4.a"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "The desired transit interface has address 10.92.0.2/30. Which interface-mode command enables OSPF process 7 in area 0 directly, without using a router-level network statement?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "ip ospf 7 area 0",
+          "explanation": "This activates the selected interface in the named local process and area."
+        },
+        {
+          "id": "B",
+          "text": "ip ospf router-id 7 area 0",
+          "explanation": "Router-ID selection is not expressed by this activation syntax."
+        },
+        {
+          "id": "C",
+          "text": "ip route 10.92.0.0 255.255.255.252 7",
+          "explanation": "A static route command does not enable OSPF on an interface."
+        },
+        {
+          "id": "D",
+          "text": "router ospf 7 area 0",
+          "explanation": "This is not the interface command syntax for activation."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Interface-level activation is explicit and avoids wildcard scope mistakes. Other adjacency requirements must still match the peer.",
+      "references": [
+        {
+          "title": "Configuring OSPF — IP Routing: OSPF Configuration Guide",
+          "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_ospf/configuration/xe-16/iro-xe-16-book/iro-cfg.html",
+          "section": "Enabling OSPF; Configuring OSPF Interface Parameters"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-054",
+      "domain": 3,
+      "objectives": [
+        "3.4.a"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "Two area-0 peers have compatible addresses, timers, network type, MTU and unique IDs. R1 requires OSPF authentication while R2 sends unauthenticated Hellos. Which action addresses the specific fault?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Configure matching OSPF authentication parameters on the link.",
+          "explanation": "The peers must agree on the required authentication behavior and credentials."
+        },
+        {
+          "id": "B",
+          "text": "Use identical local OSPF process numbers.",
+          "explanation": "Process-number equality does not authenticate Hello packets."
+        },
+        {
+          "id": "C",
+          "text": "Install a default route on R2.",
+          "explanation": "Default routing does not satisfy an OSPF authentication check."
+        },
+        {
+          "id": "D",
+          "text": "Set both interface costs to the same value.",
+          "explanation": "Neighbor interface costs may differ and do not repair authentication."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Compatibility includes authentication, not only IP reachability. Do not treat successful ping as proof that OSPF control packets meet the peer’s requirements.",
+      "references": [
+        {
+          "title": "Troubleshoot OSPF Neighbor Problems",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/13699-29.html",
+          "section": "No State Revealed; Neighbors Stuck in Exstart/Exchange State"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-055",
+      "domain": 3,
+      "objectives": [
+        "3.4.b"
+      ],
+      "type": "single",
+      "difficulty": "Foundation",
+      "prompt": "An Ethernet OSPF link is configured as point-to-point on both ends. An engineer sees that neither neighbor is labeled DR or BDR and proposes increasing priorities. What is the right response?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Force a duplicate router ID to create a tie.",
+          "explanation": "Duplicate identifiers are faults, not an election mechanism."
+        },
+        {
+          "id": "B",
+          "text": "Increase both priorities until one becomes DR.",
+          "explanation": "Priority changes cannot create an election on this OSPF type."
+        },
+        {
+          "id": "C",
+          "text": "Keep the intended network type; the absent elected roles are expected.",
+          "explanation": "Point-to-point operation intentionally omits DR and BDR."
+        },
+        {
+          "id": "D",
+          "text": "Add a third router without changing the design.",
+          "explanation": "A third participant changes the assumptions of a dedicated point-to-point link."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Validate the output against the intended OSPF network type. Absence of a broadcast-specific role is not itself a problem.",
+      "references": [
+        {
+          "title": "RFC 2328: OSPF Version 2",
+          "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+          "section": "9.4 Electing the Designated Router; 10 The Neighbor Data Structure; 16 Calculation of the routing table"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-056",
+      "domain": 3,
+      "objectives": [
+        "3.4.c"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "The DR and BDR are healthy on an OSPF LAN. Only a DROTHER router fails. Which expected behavior best fits this event?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The BDR must become DR immediately.",
+          "explanation": "The current DR has not failed."
+        },
+        {
+          "id": "B",
+          "text": "The current DR and BDR roles can remain unchanged.",
+          "explanation": "Losing a non-elected participant does not require displacing healthy incumbents."
+        },
+        {
+          "id": "C",
+          "text": "Every router must set its priority to zero.",
+          "explanation": "The protocol does not require making all survivors ineligible."
+        },
+        {
+          "id": "D",
+          "text": "All LAN hosts must change their default gateways to the DR.",
+          "explanation": "An OSPF DR is not automatically the LAN’s host gateway."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Identify which role was lost before predicting an election effect. Neighbor loss still changes topology information without necessarily changing the elected leaders.",
+      "references": [
+        {
+          "title": "RFC 2328: OSPF Version 2",
+          "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+          "section": "9.4 Electing the Designated Router; 10 The Neighbor Data Structure; 16 Calculation of the routing table"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-057",
+      "domain": 3,
+      "objectives": [
+        "3.4.c",
+        "3.5"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "The HSRP active gateway and the OSPF DR on a VLAN are different routers. Both protocols are healthy. Which interpretation is correct?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "This can be valid because the two protocols elect roles for different functions.",
+          "explanation": "HSRP supplies a virtual first hop; the OSPF DR organizes broadcast adjacency exchange."
+        },
+        {
+          "id": "B",
+          "text": "The HSRP active must always be the OSPF DR.",
+          "explanation": "The protocols have independent selection mechanisms and purposes."
+        },
+        {
+          "id": "C",
+          "text": "The OSPF DR cannot forward ordinary IP packets.",
+          "explanation": "DR status does not prohibit data-plane forwarding."
+        },
+        {
+          "id": "D",
+          "text": "The HSRP standby must be an OSPF area border router.",
+          "explanation": "Standby status does not determine area membership."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Do not confuse similarly named leadership roles. A design may coordinate them, but protocol correctness does not require them to be on one device.",
+      "references": [
+        {
+          "title": "RFC 2328: OSPF Version 2",
+          "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+          "section": "9.4 Electing the Designated Router; 10 The Neighbor Data Structure; 16 Calculation of the routing table"
+        },
+        {
+          "title": "Understand the Hot Standby Router Protocol Features and Functionality",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/hot-standby-router-protocol-hsrp/9234-hsrpguidetoc.html",
+          "section": "HSRP Background and Operations; HSRP Operation"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-058",
+      "domain": 3,
+      "objectives": [
+        "3.4.d"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An OSPF process explicitly uses router ID 203.0.113.200, although no interface has that address. Neighbors form normally. Which statement is correct?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The router must answer ARP for that address on every interface.",
+          "explanation": "Router-ID configuration does not assign an IP address to each link."
+        },
+        {
+          "id": "B",
+          "text": "The identifier can be valid without being an assigned interface address.",
+          "explanation": "An explicit router ID is a unique 32-bit OSPF identifier."
+        },
+        {
+          "id": "C",
+          "text": "The neighbor state must be fabricated because IDs require loopbacks.",
+          "explanation": "An explicit ID does not require a matching loopback."
+        },
+        {
+          "id": "D",
+          "text": "The router must own the entire 203.0.113.0/24 subnet.",
+          "explanation": "Selecting an ID does not create network ownership or routes."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Keep identity and reachability separate. Uniqueness is required, but the router-ID command alone does not establish an IP endpoint at that value.",
+      "references": [
+        {
+          "title": "Configuring OSPF — IP Routing: OSPF Configuration Guide",
+          "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_ospf/configuration/xe-16/iro-xe-16-book/iro-cfg.html",
+          "section": "Enabling OSPF; Configuring OSPF Interface Parameters"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-059",
+      "domain": 3,
+      "objectives": [
+        "3.2.c"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "An engineer changes only an interface’s OSPF cost from 10 to 100. The link stays up and other adjacency parameters are unchanged. Which two consequences are appropriate to assess? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Paths using the changed outgoing link can become less preferred.",
+          "explanation": "Higher accumulated cost can change shortest-path selection."
+        },
+        {
+          "id": "B",
+          "text": "The OSPF topology change must converge before final path behavior is assessed.",
+          "explanation": "The updated cost is propagated and routing calculations respond."
+        },
+        {
+          "id": "C",
+          "text": "The Hello interval automatically changes to 100 seconds.",
+          "explanation": "Cost is independent of Hello timer configuration."
+        },
+        {
+          "id": "D",
+          "text": "The local router ID automatically becomes 100.",
+          "explanation": "Interface cost is unrelated to router-ID selection."
+        }
+      ],
+      "answer": [
+        "A",
+        "B"
+      ],
+      "explanation": "Cost is a path-selection input. Verify resulting routes after convergence instead of assuming a cost change also modifies identity or neighbor timers.",
+      "references": [
+        {
+          "title": "Configuring OSPF — IP Routing: OSPF Configuration Guide",
+          "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_ospf/configuration/xe-16/iro-xe-16-book/iro-cfg.html",
+          "section": "Enabling OSPF; Configuring OSPF Interface Parameters"
+        },
+        {
+          "title": "RFC 2328: OSPF Version 2",
+          "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+          "section": "9.4 Electing the Designated Router; 10 The Neighbor Data Structure; 16 Calculation of the routing table"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-060",
+      "domain": 3,
+      "objectives": [
+        "3.4.a",
+        "3.4.c",
+        "3.4.d"
+      ],
+      "type": "matching",
+      "difficulty": "Applied",
+      "prompt": "Match the operator’s verification goal to the most appropriate Cisco IOS command.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "show ip ospf neighbor",
+          "explanation": "This reports live peers, neighbor states and their roles."
+        },
+        {
+          "id": "B",
+          "text": "show ip ospf",
+          "explanation": "This reports the running OSPF process, including its router ID."
+        },
+        {
+          "id": "C",
+          "text": "show ip route ospf",
+          "explanation": "This filters the main routing table to installed OSPF routes."
+        },
+        {
+          "id": "D",
+          "text": "show ip ospf interface",
+          "explanation": "This reports interface-specific area, timers, network type, cost and elected information."
+        }
+      ],
+      "answer": [],
+      "explanation": "Choose evidence at the correct scope: neighbor, interface, process, or installed route. One command does not prove every layer is healthy.",
+      "references": [
+        {
+          "title": "Configuring OSPF — IP Routing: OSPF Configuration Guide",
+          "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_ospf/configuration/xe-16/iro-xe-16-book/iro-cfg.html",
+          "section": "Enabling OSPF; Configuring OSPF Interface Parameters"
+        },
+        {
+          "title": "Understand OSPF Neighbor States",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/open-shortest-path-first-ospf/13685-13.html",
+          "section": "OSPF Neighbor States"
+        }
+      ],
+      "pairs": [
+        {
+          "id": "1",
+          "text": "Determine whether a peer has synchronized to Full",
+          "answer": "A"
+        },
+        {
+          "id": "2",
+          "text": "Check the local broadcast link’s Hello interval and DR",
+          "answer": "D"
+        },
+        {
+          "id": "3",
+          "text": "Verify the current process router ID after a restart",
+          "answer": "B"
+        },
+        {
+          "id": "4",
+          "text": "Find which OSPF-learned prefixes actually won main-table installation",
+          "answer": "C"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-061",
+      "domain": 3,
+      "objectives": [
+        "3.2.c"
+      ],
+      "type": "single",
+      "difficulty": "Challenge",
+      "prompt": "The table shows all outgoing OSPF interface costs along two complete intra-area paths to a LAN. What change to Path A’s final cost makes the two paths equal?",
+      "exhibit": {
+        "kind": "table",
+        "headers": [
+          "Path",
+          "Outgoing interface costs, in order"
+        ],
+        "rows": [
+          [
+            "A",
+            "6, 4, 10"
+          ],
+          [
+            "B",
+            "9, 12"
+          ]
+        ]
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "Decrease its final cost from 10 to 9.",
+          "explanation": "That lowers the path to 19, farther from 21."
+        },
+        {
+          "id": "B",
+          "text": "Increase the first router’s ID by 1.",
+          "explanation": "Router-ID arithmetic does not add path cost."
+        },
+        {
+          "id": "C",
+          "text": "Increase its final cost from 10 to 11.",
+          "explanation": "6 + 4 + 11 equals the alternative’s 9 + 12 = 21."
+        },
+        {
+          "id": "D",
+          "text": "Increase its final cost from 10 to 21.",
+          "explanation": "The total becomes 31, not 21."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Work with complete path totals rather than individual link values. Equal-cost paths can then qualify for ECMP subject to the configured limit.",
+      "references": [
+        {
+          "title": "RFC 2328: OSPF Version 2",
+          "url": "https://www.rfc-editor.org/rfc/rfc2328.html",
+          "section": "9.4 Electing the Designated Router; 10 The Neighbor Data Structure; 16 Calculation of the routing table"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-062",
+      "domain": 3,
+      "objectives": [
+        "3.5"
+      ],
+      "type": "single",
+      "difficulty": "Challenge",
+      "prompt": "Two HSRP peers are separated by a VLAN partition that prevents their Hello messages from crossing, while each still serves local hosts. What risk does this create?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Each side may believe it should own the active virtual gateway.",
+          "explanation": "Loss of peer visibility can cause conflicting active ownership across a partition."
+        },
+        {
+          "id": "B",
+          "text": "The routers automatically repair the failed Layer 2 connection.",
+          "explanation": "HSRP does not reconstruct the physical or VLAN transport."
+        },
+        {
+          "id": "C",
+          "text": "The virtual address must immediately become an IPv6 multicast address.",
+          "explanation": "A partition does not change the configured address family."
+        },
+        {
+          "id": "D",
+          "text": "All local hosts automatically migrate to the other switch.",
+          "explanation": "FHRP cannot move physical host attachments."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Failure detection depends on communication with the peer. A partition differs from a clean single-router power failure and requires checking duplicate active ownership after reconnection.",
+      "references": [
+        {
+          "title": "Understand the Hot Standby Router Protocol Features and Functionality",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/hot-standby-router-protocol-hsrp/9234-hsrpguidetoc.html",
+          "section": "HSRP Background and Operations; HSRP Operation"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-063",
+      "domain": 3,
+      "objectives": [
+        "3.5"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A host sends traffic to another host in the same /24 VLAN. Its normal mask and connected path are correct. Does an HSRP active-router failover necessarily participate in this local host-to-host forwarding?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "No, because HSRP disables all local switching.",
+          "explanation": "HSRP does not disable ordinary VLAN switching."
+        },
+        {
+          "id": "B",
+          "text": "Yes; every Ethernet frame must cross the HSRP active router.",
+          "explanation": "Switching within a subnet does not inherently require routed forwarding."
+        },
+        {
+          "id": "C",
+          "text": "Yes; the standby must translate every local destination address.",
+          "explanation": "HSRP does not provide this address-translation function."
+        },
+        {
+          "id": "D",
+          "text": "No; the host normally resolves and reaches the local peer directly.",
+          "explanation": "Same-subnet traffic does not ordinarily traverse the default gateway."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Assess redundancy against the actual traffic path. A default-gateway protocol primarily matters when the host needs a routed next hop.",
+      "references": [
+        {
+          "title": "Understand the Hot Standby Router Protocol Features and Functionality",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/hot-standby-router-protocol-hsrp/9234-hsrpguidetoc.html",
+          "section": "HSRP Background and Operations; HSRP Operation"
+        },
+        {
+          "title": "RFC 1812: Requirements for IP Version 4 Routers",
+          "url": "https://www.rfc-editor.org/rfc/rfc1812.html",
+          "section": "5.2.4 Determining the Next Hop Address"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-064",
+      "domain": 3,
+      "objectives": [
+        "3.5"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A recovered HSRP router has higher priority and preemption configured with a delay. Why might the design intentionally wait before reclaiming active status?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "To eliminate the need for any standby router.",
+          "explanation": "Delayed preemption still operates within a redundancy group."
+        },
+        {
+          "id": "B",
+          "text": "To make the virtual IP numerically larger.",
+          "explanation": "Time delay does not alter the virtual address."
+        },
+        {
+          "id": "C",
+          "text": "To allow routing and other required services to become ready first.",
+          "explanation": "Immediate gateway ownership can be premature while the recovered router reconverges."
+        },
+        {
+          "id": "D",
+          "text": "To cause hosts to run OSPF while waiting.",
+          "explanation": "Ordinary hosts do not need to become routing peers during this delay."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Link-up and full service readiness are different milestones. A preemption delay can reduce disruption during recovery, though its adequacy should be tested.",
+      "references": [
+        {
+          "title": "Use HSRP Preempt and Track Commands",
+          "url": "https://www.cisco.com/c/en/us/support/docs/ip/hot-standby-router-protocol-hsrp/13780-6.html",
+          "section": "Preempt and Track Commands"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-065",
+      "domain": 3,
+      "objectives": [
+        "3.3.b",
+        "3.1.d"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A static network route points to a reachable adjacent router, but packets stop one hop beyond it. The local static remains installed. What does this indicate about local route verification?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The adjacent next hop must secretly be the destination host.",
+          "explanation": "A next hop can remain reachable while further forwarding fails."
+        },
+        {
+          "id": "B",
+          "text": "The installed route proves every downstream router has the correct return path.",
+          "explanation": "Local installation does not inspect every remote routing table."
+        },
+        {
+          "id": "C",
+          "text": "Reachable next-hop resolution does not prove the complete downstream path works.",
+          "explanation": "The local router can keep a valid forwarding entry while a later hop is broken."
+        },
+        {
+          "id": "D",
+          "text": "The local static must automatically change to a different network prefix.",
+          "explanation": "Static routes do not infer a new destination prefix from distant failure."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Trace the failure beyond the locally resolved adjacency. Route validity and end-to-end delivery must be verified with different evidence.",
+      "references": [
+        {
+          "title": "Configure a Next Hop IP Address for Static Routes",
+          "url": "https://www.cisco.com/c/en/us/support/docs/dial-access/floating-static-route/118263-technote-nexthop-00.html",
+          "section": "Background Information; Floating Static Route Example"
+        },
+        {
+          "title": "RFC 1812: Requirements for IP Version 4 Routers",
+          "url": "https://www.rfc-editor.org/rfc/rfc1812.html",
+          "section": "5.2.4 Determining the Next Hop Address"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-066",
+      "domain": 4,
+      "objectives": [
+        "4.1"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A technician defines the shown NAT pool and inside-client ACL, but no dynamic translation rule exists. NAT interface roles and routes are correct. Which command binds these two objects for basic dynamic inside-source NAT without port sharing?",
+      "exhibit": {
+        "kind": "code",
+        "content": "access-list 18 permit 10.18.0.0 0.0.0.255\nip nat pool PUBLIC 198.51.100.80 198.51.100.89 netmask 255.255.255.0"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "ip nat inside source list 18 pool PUBLIC",
+          "explanation": "This associates ACL 18 with the named global-address pool."
+        },
+        {
+          "id": "B",
+          "text": "ip nat outside source list 18 pool PUBLIC",
+          "explanation": "This selects outside-source translation instead of inside-source translation."
+        },
+        {
+          "id": "C",
+          "text": "ip nat inside source list 18 interface GigabitEthernet0/1 overload",
+          "explanation": "This uses interface-address port sharing rather than the required pool mapping."
+        },
+        {
+          "id": "D",
+          "text": "ip nat pool PUBLIC 10.18.0.1 10.18.0.254 netmask 255.255.255.0",
+          "explanation": "This replaces the global-address pool with inside addresses and still supplies no binding rule."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "A pool definition only describes available translated addresses. The inside-source list-to-pool rule connects eligible client addresses to that resource.",
+      "references": [
+        {
+          "title": "IP Addressing Configuration Guide, Cisco IOS XE 17.x — Configuring NAT for IP Address Conservation",
+          "url": "https://www.cisco.com/c/en/us/td/docs/routers/ios/config/17-x/ip-addressing/b-ip-addressing/m_iadnat-addr-consv-xe.html",
+          "section": "Inside source address translation; static and dynamic translations; monitoring NAT"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-067",
+      "domain": 4,
+      "objectives": [
+        "4.2"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An NTP server permits requests only from a router's loopback address, 10.255.5.5. The router currently sources its requests from the outgoing interface, and the server rejects them. All relevant routes exist. Which IOS configuration aligns the requests with the server policy?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "ntp master 5",
+          "explanation": "Making the local clock an authority does not fix the requested client source address."
+        },
+        {
+          "id": "B",
+          "text": "clock timezone UTC 0",
+          "explanation": "Time-zone presentation does not select the packet source."
+        },
+        {
+          "id": "C",
+          "text": "ntp source Loopback0, where Loopback0 is 10.255.5.5",
+          "explanation": "This selects the intended stable source address for the NTP packets."
+        },
+        {
+          "id": "D",
+          "text": "logging source-interface Loopback0",
+          "explanation": "This selects a syslog source, not the NTP source."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Management service access policies must match the effective packet source. Selecting the loopback for NTP fixes this source mismatch while the stated routes support responses to it.",
+      "references": [
+        {
+          "title": "Setting Time and Calendar Services",
+          "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/bsm/configuration/15-mt/bsm-15-mt-book/bsm-time-calendar-set.html",
+          "section": "Network Time Protocol; configuring NTP associations; monitoring NTP"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-068",
+      "domain": 4,
+      "objectives": [
+        "4.3"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "A DHCPv4 client with a valid lease enters the normal RENEWING state at T1. Its original server is reachable. Which two statements describe this phase? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "It must send a DHCPDISCOVER before every renewal request.",
+          "explanation": "A bound client renewing its lease does not repeat initial discovery first."
+        },
+        {
+          "id": "B",
+          "text": "It must stop using the address immediately when T1 arrives.",
+          "explanation": "The lease remains valid beyond T1 until its actual expiration."
+        },
+        {
+          "id": "C",
+          "text": "It can keep using the still-valid leased address during renewal.",
+          "explanation": "Reaching T1 does not itself expire the lease."
+        },
+        {
+          "id": "D",
+          "text": "It asks a DNS server to extend the DHCP lease.",
+          "explanation": "DNS does not own DHCP lease allocation."
+        },
+        {
+          "id": "E",
+          "text": "It normally unicasts a DHCPREQUEST to the original leasing server.",
+          "explanation": "Renewal first attempts to extend the existing lease with that server."
+        }
+      ],
+      "answer": [
+        "C",
+        "E"
+      ],
+      "explanation": "Renewal extends an existing lease rather than necessarily beginning a fresh four-message allocation. If renewal fails, later rebinding and eventual lease expiration are separate state transitions.",
+      "references": [
+        {
+          "title": "RFC 2131 — Dynamic Host Configuration Protocol",
+          "url": "https://www.rfc-editor.org/rfc/rfc2131.html",
+          "section": "3.1 Address allocation; 4.3 Server behavior; 4.4 Client behavior"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-069",
+      "domain": 4,
+      "objectives": [
+        "4.4"
+      ],
+      "type": "matching",
+      "difficulty": "Applied",
+      "prompt": "Match each SNMP management requirement to the appropriate operation. Use each option once.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Get",
+          "explanation": "Reads a specifically named object instance."
+        },
+        {
+          "id": "B",
+          "text": "Inform",
+          "explanation": "Sends an event notification for which the receiving manager returns a response."
+        },
+        {
+          "id": "C",
+          "text": "Set",
+          "explanation": "Requests a change to a writable managed object."
+        },
+        {
+          "id": "D",
+          "text": "GetBulk",
+          "explanation": "Retrieves multiple successive values efficiently, useful for walking a large table."
+        }
+      ],
+      "answer": [],
+      "pairs": [
+        {
+          "id": "1",
+          "text": "Read one known temperature-sensor object instance.",
+          "answer": "A"
+        },
+        {
+          "id": "2",
+          "text": "Retrieve many interface-table values without one request per next entry.",
+          "answer": "D"
+        },
+        {
+          "id": "3",
+          "text": "Change a writable administrative description using authorized management access.",
+          "answer": "C"
+        },
+        {
+          "id": "4",
+          "text": "Report an event asynchronously and request acknowledgment of receipt.",
+          "answer": "B"
+        }
+      ],
+      "explanation": "SNMP distinguishes object retrieval, authorized modification, and event notification. The object must exist and the requester must have the necessary access for the chosen operation.",
+      "references": [
+        {
+          "title": "RFC 3416 — Version 2 of the Protocol Operations for the Simple Network Management Protocol (SNMP)",
+          "url": "https://www.rfc-editor.org/rfc/rfc3416.html",
+          "section": "4.2 PDU processing: Get, GetNext, GetBulk, Set, notifications"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-070",
+      "domain": 4,
+      "objectives": [
+        "4.5"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A router stores logs only in a finite RAM buffer. After a power failure and reboot, the operator needs events from just before the failure. No remote collector or persistent local logging had been configured. Which conclusion is justified?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "show logging must reconstruct every prior event from the startup configuration.",
+          "explanation": "Configuration stores intended settings, not a complete historical event journal."
+        },
+        {
+          "id": "B",
+          "text": "Raising severity to emergencies makes the RAM buffer nonvolatile.",
+          "explanation": "Severity filtering does not change memory persistence."
+        },
+        {
+          "id": "C",
+          "text": "A larger in-memory buffer guarantees survival through power loss.",
+          "explanation": "Additional volatile capacity does not provide durability."
+        },
+        {
+          "id": "D",
+          "text": "The previous RAM-buffer contents may be lost; future retention needs a suitable external or persistent destination.",
+          "explanation": "A volatile buffer does not preserve the prior boot's event history across loss of power."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Retention depends on storage and collection design, not just message generation. A local RAM log can help during a running session but is insufficient evidence retention for a total power loss.",
+      "references": [
+        {
+          "title": "System Message Logging",
+          "url": "https://www.cisco.com/c/en/us/td/docs/routers/access/wireless/software/guide/SysMsgLogging.html",
+          "section": "System log message format; logging destinations; severity levels; timestamps"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-071",
+      "domain": 4,
+      "objectives": [
+        "4.6"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A VLAN previously used DHCP server 10.9.0.10. That server is now decommissioned, and its replacement at 10.9.0.20 has working scopes and routes. Static hosts on the VLAN work, but fresh DHCP clients fail. What is the smallest correction to the shown relay configuration?",
+      "exhibit": {
+        "kind": "code",
+        "content": "interface Vlan60\n ip address 10.60.0.1 255.255.255.0\n ip helper-address 10.9.0.10"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "Replace the helper address with 10.9.0.20 on Vlan60.",
+          "explanation": "The relay still forwards requests to the retired server."
+        },
+        {
+          "id": "B",
+          "text": "Change the VLAN gateway to 10.9.0.20/24.",
+          "explanation": "The remote server is not the local clients' gateway interface."
+        },
+        {
+          "id": "C",
+          "text": "Replace the SVI's static address with ip address dhcp.",
+          "explanation": "That would alter the gateway's own addressing, not its server destination."
+        },
+        {
+          "id": "D",
+          "text": "Change every DHCP scope to the server's 10.9.0.0 subnet.",
+          "explanation": "Scopes must still correspond to the client subnet identified by the relay."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Static reachability can survive while the DHCP provisioning path points to a retired service. Update the helper destination and retain the VLAN's gateway address and client scope.",
+      "references": [
+        {
+          "title": "IP Addressing: DHCP Configuration Guide, Cisco IOS XE Everest 16.6 — Configuring the Cisco IOS XE DHCP Relay Agent",
+          "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipaddr_dhcp/configuration/xe-16-6/dhcp-xe-16-6-book/dhcp-relay-agent-xe.html",
+          "section": "Packet forwarding address; giaddr; specifying the packet forwarding address"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-072",
+      "domain": 4,
+      "objectives": [
+        "4.7"
+      ],
+      "type": "single",
+      "difficulty": "Challenge",
+      "prompt": "A 100 Mb/s egress link receives a sustained 140 Mb/s of offered traffic. A finite queue fills even though all packets have valid DSCP markings. Which statement explains why marking alone cannot prevent the drops?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Correct markings automatically increase the interface to 140 Mb/s.",
+          "explanation": "A packet label does not change physical capacity."
+        },
+        {
+          "id": "B",
+          "text": "An infinite retry count in DNS expands the queue.",
+          "explanation": "DNS retry behavior does not provide egress buffering capacity."
+        },
+        {
+          "id": "C",
+          "text": "The sustained arrival rate exceeds service capacity; finite buffering cannot absorb the excess indefinitely.",
+          "explanation": "The queue accumulates the continuing 40 Mb/s excess until its capacity is reached."
+        },
+        {
+          "id": "D",
+          "text": "Any queue can store unlimited packets if they share one DSCP.",
+          "explanation": "Queue storage remains finite regardless of class labels."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Queuing can absorb a bounded burst, but not an unending positive rate difference. QoS determines treatment under contention; it does not remove the capacity constraint.",
+      "references": [
+        {
+          "title": "Quality of Service Configuration Guide — Quality of service",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/qos/quality-of-service-configuration-guide/m-quality-of-service.html",
+          "section": "Classification; marking; queuing and scheduling; policing and shaping"
+        },
+        {
+          "title": "RFC 2475 — An Architecture for Differentiated Services",
+          "url": "https://www.rfc-editor.org/rfc/rfc2475.html",
+          "section": "2.3 Traffic classification and conditioning; 2.4 Per-hop behaviors"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-073",
+      "domain": 4,
+      "objectives": [
+        "4.8"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "A network team needs evidence that an IOS XE router supports SSH version 2 and that an administrator currently has an SSH session. Which two show commands directly provide these distinct checks? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "show ip ssh",
+          "explanation": "This displays SSH server version and configuration status."
+        },
+        {
+          "id": "B",
+          "text": "show ntp associations",
+          "explanation": "Time-source associations do not list SSH sessions."
+        },
+        {
+          "id": "C",
+          "text": "show ssh",
+          "explanation": "This displays current SSH server connections."
+        },
+        {
+          "id": "D",
+          "text": "show ip route",
+          "explanation": "Routes support reachability but do not report the SSH version or session state."
+        },
+        {
+          "id": "E",
+          "text": "show ip nat translations",
+          "explanation": "NAT bindings do not establish the router's own SSH server state."
+        }
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "explanation": "Verify both the service configuration and its active use. A server can be enabled with no current sessions, so the two observations answer different questions.",
+      "references": [
+        {
+          "title": "Configure SSH on Routers",
+          "url": "https://www.cisco.com/c/en/us/support/docs/security-vpn/secure-shell-ssh/4145-ssh.html",
+          "section": "SSH server prerequisites; SSHv2; VTY restrictions; show commands"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-074",
+      "domain": 4,
+      "objectives": [
+        "4.8"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A router's SSH host key was deliberately replaced during a documented rebuild. A client now reports that its saved host key differs from the presented key. What should the administrator do before accepting the replacement?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Disable all host-key checking permanently.",
+          "explanation": "That removes server identity verification for future connections."
+        },
+        {
+          "id": "B",
+          "text": "Verify the new fingerprint through an independently trusted record or console path.",
+          "explanation": "A key change can be legitimate, but authentication of the new key must be re-established."
+        },
+        {
+          "id": "C",
+          "text": "Assume the password prompt proves the server is the intended router.",
+          "explanation": "An impostor can also present a password prompt."
+        },
+        {
+          "id": "D",
+          "text": "Treat a successful ICMP echo as proof of the new key's identity.",
+          "explanation": "IP reachability does not authenticate the SSH host key."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "The saved host key binds a server identity to later SSH connections. A legitimate rebuild explains why change is possible, but the replacement fingerprint still needs trustworthy verification before updating that binding.",
+      "references": [
+        {
+          "title": "RFC 4251 — The Secure Shell (SSH) Protocol Architecture",
+          "url": "https://www.rfc-editor.org/rfc/rfc4251.html",
+          "section": "4 Architecture; 9 Security considerations"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-075",
+      "domain": 4,
+      "objectives": [
+        "4.9"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A capture shows a TFTP client sending its initial read request to UDP destination 69. The server replies from UDP port 53012. The firewall allows the request but drops that reply solely because its source port is not 69. Which conclusion is correct?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "TFTP must negotiate this reply over TCP port 21 first.",
+          "explanation": "FTP's control port is unrelated to TFTP transfer setup."
+        },
+        {
+          "id": "B",
+          "text": "The server is necessarily violating base TFTP by using any port other than 69.",
+          "explanation": "TFTP selects transfer identifiers for the actual transfer."
+        },
+        {
+          "id": "C",
+          "text": "The server may select a transfer-specific port; the rule is too restrictive for this exchange.",
+          "explanation": "The initial well-known port and the server's transfer identifier need not be the same."
+        },
+        {
+          "id": "D",
+          "text": "The client should acknowledge every block back to UDP 69 regardless of the server port.",
+          "explanation": "The transfer continues using the selected transfer identifiers."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "UDP 69 is the rendezvous port for the initial request. Subsequent TFTP packets use the selected endpoint transfer ports, which a firewall must accommodate appropriately.",
+      "references": [
+        {
+          "title": "RFC 1350 — The TFTP Protocol (Revision 2)",
+          "url": "https://www.rfc-editor.org/info/rfc1350/",
+          "section": "2 Protocol overview; 3 Relation to other protocols; 4 Initial connection; 6 Normal termination"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-076",
+      "domain": 5,
+      "objectives": [
+        "5.1"
+      ],
+      "type": "matching",
+      "difficulty": "Applied",
+      "prompt": "An incident report contains the following four items. Match each to its security concept. Use each concept once.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Threat",
+          "explanation": "A possible harmful event or actor can exploit a weakness."
+        },
+        {
+          "id": "B",
+          "text": "Vulnerability",
+          "explanation": "A weakness can make an asset susceptible to harm."
+        },
+        {
+          "id": "C",
+          "text": "Exploit",
+          "explanation": "A mechanism or action takes advantage of the weakness."
+        },
+        {
+          "id": "D",
+          "text": "Mitigation",
+          "explanation": "An action reduces the likelihood or impact of harm."
+        }
+      ],
+      "answer": [],
+      "pairs": [
+        {
+          "id": "1",
+          "text": "A reachable service fails to validate a specific input length.",
+          "answer": "B"
+        },
+        {
+          "id": "2",
+          "text": "A crafted oversized request uses that defect to obtain code execution.",
+          "answer": "C"
+        },
+        {
+          "id": "3",
+          "text": "A hostile actor intends to take control of the management service.",
+          "answer": "A"
+        },
+        {
+          "id": "4",
+          "text": "The operator blocks unapproved access paths while arranging a repair.",
+          "answer": "D"
+        }
+      ],
+      "explanation": "Separate the weakness, the mechanism using it, the harmful actor or possibility, and the risk-reducing action. They describe different parts of the same event.",
+      "references": [
+        {
+          "title": "RFC 4949: Internet Security Glossary, Version 2",
+          "url": "https://www.rfc-editor.org/rfc/rfc4949.html",
+          "section": "Section 2: threat, vulnerability, exploit, and countermeasure"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-077",
+      "domain": 5,
+      "objectives": [
+        "5.2"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "A data-room access review finds that a departed contractor’s badge still opens the door. Which two program actions directly address the failure and help prevent recurrence? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Leave the badge active until its originally scheduled annual expiry.",
+          "explanation": "That retains known unauthorized access after the contractor has departed."
+        },
+        {
+          "id": "B",
+          "text": "Revoke the contractor’s physical access authorization.",
+          "explanation": "The identified obsolete authorization must stop granting entry."
+        },
+        {
+          "id": "C",
+          "text": "Tie badge removal to the personnel departure process and verify completion.",
+          "explanation": "A repeatable offboarding control reduces recurrence."
+        },
+        {
+          "id": "D",
+          "text": "Publish the contractor’s badge number on the reception wall.",
+          "explanation": "Public disclosure does not revoke the credential."
+        }
+      ],
+      "answer": [
+        "B",
+        "C"
+      ],
+      "explanation": "Access authorization must follow current roles and affiliation. The fix includes removing the stale access and correcting the process that should have removed it.",
+      "references": [
+        {
+          "title": "NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations",
+          "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r5.pdf",
+          "section": "AT-2, AT-3, PE-2, and PE-3: awareness, training, and physical access"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-078",
+      "domain": 5,
+      "objectives": [
+        "5.3"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "With AAA disabled, a router has login local on its VTY lines but the local username database is empty. SSH transport and reachability are already verified. What must be added for username-based local authentication to succeed?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "A default route to a RADIUS server without changing authentication configuration.",
+          "explanation": "The selected method is local; routing alone does not configure server authentication."
+        },
+        {
+          "id": "B",
+          "text": "A valid local username and secret.",
+          "explanation": "login local needs an actual account in the local database."
+        },
+        {
+          "id": "C",
+          "text": "Only an enable secret.",
+          "explanation": "That controls the enable transition and does not create a login account."
+        },
+        {
+          "id": "D",
+          "text": "Only a password command under the VTY lines.",
+          "explanation": "A line password is not the credential source selected by login local."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "The line selects the local account database, so that database must contain the intended user. Transport reachability and authentication prerequisites are separate checks.",
+      "references": [
+        {
+          "title": "Catalyst 3750-X and 3560-X Configuration Guide: Configuring Switch-Based Authentication",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3750x_3560x/software/release/15-0_2_se/configuration/guide/3750x_cg/swauthen.html",
+          "section": "Protecting Access to Privileged EXEC Commands; Configuring Username and Password Pairs"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-079",
+      "domain": 5,
+      "objectives": [
+        "5.4"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An administrator accidentally pastes a live device password into an unrestricted ticket. Removing the visible text is possible. Which response best addresses the credential exposure?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Raise minimum password complexity without changing the exposed active credential.",
+          "explanation": "A prospective policy requirement does not invalidate the already disclosed password."
+        },
+        {
+          "id": "B",
+          "text": "Delete the text and assume nobody retained it.",
+          "explanation": "The exposed value may already have been copied or logged."
+        },
+        {
+          "id": "C",
+          "text": "Remove the exposed text and rotate the credential through the approved process.",
+          "explanation": "Copies or prior readers may retain the old value, so deletion alone is insufficient."
+        },
+        {
+          "id": "D",
+          "text": "Append an exclamation mark to the public ticket without changing the device password.",
+          "explanation": "The live credential remains unchanged."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Treat the disclosed credential as exposed even if the ticket is edited. Invalidate the old value and distribute its replacement only through approved channels.",
+      "references": [
+        {
+          "title": "NIST SP 800-63B-4: Digital Identity Guidelines — Authentication and Authenticator Management",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "section": "Authentication factors; password verifiers; authenticator management"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-080",
+      "domain": 5,
+      "objectives": [
+        "5.5"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A remote-access VPN policy gives a support laptop access to two internal subnets. A successful tunnel connection is followed by a denied application login. Which explanation is most consistent with a correctly separated design?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "IPsec cannot transport application-layer authentication messages.",
+          "explanation": "IPsec can carry ordinary application traffic."
+        },
+        {
+          "id": "B",
+          "text": "Every application must accept a user whenever a VPN connects.",
+          "explanation": "Tunnel admission does not imply unrestricted application authorization."
+        },
+        {
+          "id": "C",
+          "text": "A received application denial proves that the tunnel cannot forward any application traffic.",
+          "explanation": "An application-level response can traverse a functioning tunnel while the application refuses access."
+        },
+        {
+          "id": "D",
+          "text": "VPN connectivity and application authorization are independent controls.",
+          "explanation": "Access to a network path need not grant an application identity permission."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "A VPN establishes a protected network path under its policy. The application may still require its own credentials and permissions before providing service.",
+      "references": [
+        {
+          "title": "RFC 4301: Security Architecture for the Internet Protocol",
+          "url": "https://www.rfc-editor.org/rfc/rfc4301.html",
+          "section": "Sections 3, 4.1, 4.4.1: IPsec services, tunnel mode, and security policy"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-081",
+      "domain": 5,
+      "objectives": [
+        "5.6"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An engineer added deny tcp any host 192.0.2.90 eq 23 to the end of the displayed ACL. Telnet to that host is still permitted. Which edit enforces the Telnet restriction while preserving all other traffic?",
+      "exhibit": {
+        "kind": "code",
+        "content": "ip access-list extended SERVER-OUT\n 10 permit ip any any\n 20 deny tcp any host 192.0.2.90 eq 23"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "Insert the Telnet deny before permit ip any any.",
+          "explanation": "The specific rejection must be evaluated before the general permit."
+        },
+        {
+          "id": "B",
+          "text": "Replace eq 23 with eq 22 but keep the same position.",
+          "explanation": "That targets SSH and is still shadowed by the general permit."
+        },
+        {
+          "id": "C",
+          "text": "Change the ACL’s name without changing order.",
+          "explanation": "The name does not affect rule evaluation order."
+        },
+        {
+          "id": "D",
+          "text": "Append a second identical Telnet deny after the first.",
+          "explanation": "Both later denies remain unreachable for traffic already permitted."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "The existing broad permit matches the test before the appended denial is reached. Entry order must express the exception before the general case.",
+      "references": [
+        {
+          "title": "Configure IP Access Lists",
+          "url": "https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html",
+          "section": "ACL Concepts; Masks; Process ACLs; Apply ACLs; Extended ACLs"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-082",
+      "domain": 5,
+      "objectives": [
+        "5.7"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A phone and its attached PC send two distinct source MAC addresses through one access port. Port security permits only one secure address, and the phone’s address has already been learned. What configuration change permits exactly these two approved sources without disabling port security?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Keep maximum 1 and enable PortFast.",
+          "explanation": "STP edge behavior does not increase the secure source limit."
+        },
+        {
+          "id": "B",
+          "text": "Set maximum 2 and use approved secure entries for the phone and PC.",
+          "explanation": "Two accepted source identities require a two-address allowance and correct bindings."
+        },
+        {
+          "id": "C",
+          "text": "Change the violation mode to protect and keep maximum 1.",
+          "explanation": "Protect still drops sources beyond the configured maximum."
+        },
+        {
+          "id": "D",
+          "text": "Trust the port for DHCP snooping only.",
+          "explanation": "DHCP trust does not change port-security enforcement."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "The phone’s embedded switch can place multiple source MACs on one physical link. Size and verify the secure-address policy for the actual approved endpoint population.",
+      "references": [
+        {
+          "title": "Catalyst 3750-X and 3560-X Configuration Guide: Configuring Port-Based Traffic Control",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3750x_3560x/software/release/15-0_2_se/configuration/guide/3750x_cg/swtrafc.html",
+          "section": "Secure MAC Addresses; Security Violations; Port Security Aging"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-083",
+      "domain": 5,
+      "objectives": [
+        "5.8"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "The security team can see a login success record, but cannot determine which configuration commands the user entered. Which statement is accurate?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Accounting replaces the need to authenticate a user.",
+          "explanation": "Recording activity does not verify identity."
+        },
+        {
+          "id": "B",
+          "text": "Session authentication evidence does not by itself provide command accounting.",
+          "explanation": "A login result and a record of executed commands are different evidence."
+        },
+        {
+          "id": "C",
+          "text": "A login success proves every later command was recorded.",
+          "explanation": "There is no guarantee of command-level accounting in the premise."
+        },
+        {
+          "id": "D",
+          "text": "Command authorization always stores a permanent command history automatically.",
+          "explanation": "A permission decision does not inherently establish retained accounting records."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Specify accounting granularity explicitly. Session start and stop records may be adequate for one requirement, but an investigation of changes needs suitable activity records.",
+      "references": [
+        {
+          "title": "RFC 8907: The Terminal Access Controller Access-Control System Plus (TACACS+) Protocol",
+          "url": "https://www.rfc-editor.org/rfc/rfc8907.html",
+          "section": "Sections 5, 6, and 7: authentication, authorization, and accounting"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-084",
+      "domain": 5,
+      "objectives": [
+        "5.9"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "Which two statements correctly compare common WLAN security arrangements? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "WPA3-Personal uses SAE for password-based authentication.",
+          "explanation": "SAE is the WPA3-Personal authentication mechanism."
+        },
+        {
+          "id": "B",
+          "text": "WPA-Personal and WPA3-Personal are identical if their passphrase text matches.",
+          "explanation": "Using the same text does not make the protocols or exchanges identical."
+        },
+        {
+          "id": "C",
+          "text": "WPA2-Personal can use a shared PSK with AES-CCMP.",
+          "explanation": "This is a standard personal-authentication and cipher combination."
+        },
+        {
+          "id": "D",
+          "text": "WPA2-Enterprise requires every employee to know one common WLAN PSK.",
+          "explanation": "Enterprise authentication is based on 802.1X rather than a required shared personal PSK."
+        }
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "explanation": "Compare both the authentication method and the data-protection mode. Reusing a password does not turn a legacy protocol into WPA3.",
+      "references": [
+        {
+          "title": "Cisco Wireless Controller Configuration Guide, Release 8.10: WLAN Security",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-10/config-guide/b_cg810/wlan_security.html",
+          "section": "WPA1+WPA2; Configuring WPA1+WPA2 (GUI); Protected Management Frames"
+        },
+        {
+          "title": "Cisco Catalyst 9800 Configuration Guide, IOS XE 17.3.x: Wi-Fi Protected Access 3",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/17-3/config-guide/b_wl_17_3_cg/m_wpa3.html",
+          "section": "WPA3-Personal; WPA3-Personal Transition Mode; Protected Management Frames"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-085",
+      "domain": 5,
+      "objectives": [
+        "5.10"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A technician enters a 64-digit hexadecimal raw PSK in an AireOS 8.10 WLAN GUI, but leaves PSK Format set to ASCII. The intended key is exactly those 32 bytes, not a passphrase. What adjustment is needed?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Select 802.1X instead of PSK.",
+          "explanation": "That changes the authentication design and does not encode the intended PSK."
+        },
+        {
+          "id": "B",
+          "text": "Select HEX for PSK Format and enter the same valid 64 hexadecimal digits.",
+          "explanation": "HEX tells the controller to interpret the input as a raw 256-bit key."
+        },
+        {
+          "id": "C",
+          "text": "Delete one digit and keep ASCII.",
+          "explanation": "That changes the intended credential and turns it into a different passphrase input."
+        },
+        {
+          "id": "D",
+          "text": "Enter the digits as the SSID and leave the PSK empty.",
+          "explanation": "The network name is not the preshared key field."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Input format determines whether the field contains a passphrase or raw hexadecimal key material. The specified 64-digit key must be entered using HEX format.",
+      "references": [
+        {
+          "title": "Cisco Wireless Controller Configuration Guide, Release 8.10: WLAN Security",
+          "url": "https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-10/config-guide/b_cg810/wlan_security.html",
+          "section": "WPA1+WPA2; Configuring WPA1+WPA2 (GUI); Protected Management Frames"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-086",
+      "domain": 5,
+      "objectives": [
+        "5.6"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "During a controlled ACL test, counters start at zero. One TCP packet to destination port 22 enters the interface, then show access-lists reports the following. What does this evidence establish?",
+      "exhibit": {
+        "kind": "code",
+        "content": "Extended IP access list EDGE-IN\n 10 deny tcp any host 203.0.113.7 eq 22 (1 match)\n 20 permit ip any any (0 matches)"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "The router has no route to the destination.",
+          "explanation": "ACL matches do not reveal the routing table’s contents."
+        },
+        {
+          "id": "B",
+          "text": "The packet matched the SSH deny entry on this observed ACL.",
+          "explanation": "The matching deny counter increased for the controlled test."
+        },
+        {
+          "id": "C",
+          "text": "The ACL permits SSH because the last entry is a permit.",
+          "explanation": "The earlier match ends ACL processing."
+        },
+        {
+          "id": "D",
+          "text": "The SSH application authenticated the user and then rejected a command.",
+          "explanation": "An ACL counter does not demonstrate application authentication."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "A controlled counter change connects the test packet to a specific filtering decision. It establishes the local ACL action, not the state of the remote application.",
+      "references": [
+        {
+          "title": "Configure IP Access Lists",
+          "url": "https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html",
+          "section": "ACL Concepts; Masks; Process ACLs; Apply ACLs; Extended ACLs"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-087",
+      "domain": 5,
+      "objectives": [
+        "5.6"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A router’s output ACL toward a client permits only TCP from a web server’s source port 443. The client also uses a DNS server over UDP. Both have valid routes. Why can HTTPS return packets pass while DNS replies fail?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "HTTPS and DNS must always use the same transport protocol.",
+          "explanation": "Ordinary DNS UDP traffic differs from HTTPS over TCP in this case."
+        },
+        {
+          "id": "B",
+          "text": "A valid route overrides an explicit or implicit ACL deny.",
+          "explanation": "Routing reachability does not bypass interface filtering."
+        },
+        {
+          "id": "C",
+          "text": "A TCP permit does not also permit UDP DNS traffic.",
+          "explanation": "The DNS reply needs its own matching permit under the restrictive ACL."
+        },
+        {
+          "id": "D",
+          "text": "An outbound ACL does not inspect return traffic.",
+          "explanation": "Return packets leaving the interface are still subject to its output ACL."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Stateless ACL entries match their specified protocol and fields. A permitted service’s return traffic does not implicitly permit another service.",
+      "references": [
+        {
+          "title": "Configure IP Access Lists",
+          "url": "https://www.cisco.com/c/en/us/support/docs/security/ios-firewall/23602-confaccesslists.html",
+          "section": "ACL Concepts; Masks; Process ACLs; Apply ACLs; Extended ACLs"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-088",
+      "domain": 5,
+      "objectives": [
+        "5.7"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "An authorized DHCP server is reached through a verified uplink. The uplink is trusted for DHCP snooping, but remains untrusted for DAI. Which conclusion follows?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "DHCP snooping trust automatically disables every Layer 2 security feature on the interface.",
+          "explanation": "The command changes DHCP snooping treatment, not all protections."
+        },
+        {
+          "id": "B",
+          "text": "ARP messages are DHCP server replies and inherit DHCP trust.",
+          "explanation": "ARP and DHCP are different protocols."
+        },
+        {
+          "id": "C",
+          "text": "DAI can inspect only ports with DHCP snooping disabled.",
+          "explanation": "The features are commonly used together."
+        },
+        {
+          "id": "D",
+          "text": "The two features have separate trust settings; DHCP trust alone does not bypass ARP inspection.",
+          "explanation": "Trust is configured independently for the inspection features."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Do not infer one feature’s effective state from another feature’s trust flag. Verify DHCP snooping and DAI interface treatment separately.",
+      "references": [
+        {
+          "title": "Catalyst 3750-X and 3560-X Configuration Guide: Configuring DHCP Features and IP Source Guard",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3750x_3560x/software/release/15-0_2_se/configuration/guide/3750x_cg/swdhcp82.html",
+          "section": "DHCP Snooping; DHCP Snooping Binding Database; Enabling DHCP Snooping"
+        },
+        {
+          "title": "Catalyst 3750-X and 3560-X Configuration Guide: Configuring Dynamic ARP Inspection",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3750x_3560x/software/release/15-0_2_se/configuration/guide/3750x_cg/swdynarp.html",
+          "section": "Understanding Dynamic ARP Inspection; Rate Limiting; ARP ACLs"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-089",
+      "domain": 5,
+      "objectives": [
+        "5.7"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "An operator enables DAI on a user VLAN after clients have obtained DHCP leases. Which two verification checks directly help explain whether ordinary client ARP should pass? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Confirm the ingress trust state and any applied ARP ACL for the VLAN.",
+          "explanation": "These determine whether and how the packet is inspected."
+        },
+        {
+          "id": "B",
+          "text": "Confirm the expected client IP-to-MAC bindings exist in the snooping database.",
+          "explanation": "Untrusted ARP needs an authorized mapping unless another configured policy supplies it."
+        },
+        {
+          "id": "C",
+          "text": "Confirm every access port has become a routed port.",
+          "explanation": "Changing the access architecture is neither required nor a validation check for this VLAN design."
+        },
+        {
+          "id": "D",
+          "text": "Confirm that the switch’s hostname contains the VLAN number.",
+          "explanation": "Naming conventions do not determine ARP validation."
+        }
+      ],
+      "answer": [
+        "A",
+        "B"
+      ],
+      "explanation": "Check the information DAI actually consults and where inspection occurs. A VLAN-level enable command alone is not proof that every legitimate static or dynamic host is authorized.",
+      "references": [
+        {
+          "title": "Catalyst 3750-X and 3560-X Configuration Guide: Configuring Dynamic ARP Inspection",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3750x_3560x/software/release/15-0_2_se/configuration/guide/3750x_cg/swdynarp.html",
+          "section": "Understanding Dynamic ARP Inspection; Rate Limiting; ARP ACLs"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-090",
+      "domain": 5,
+      "objectives": [
+        "5.3"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A new local password works until the router is power-cycled, after which the previous password works again. No automation restores configuration. What is the most likely missed operation?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Saving the verified running configuration to startup configuration.",
+          "explanation": "The restart loads the older saved credential if the updated running state was not saved."
+        },
+        {
+          "id": "B",
+          "text": "Changing the banner after changing the password.",
+          "explanation": "A banner does not persist local credentials."
+        },
+        {
+          "id": "C",
+          "text": "Replacing the console cable after authentication succeeds.",
+          "explanation": "A cable cannot choose which configured password returns after restart."
+        },
+        {
+          "id": "D",
+          "text": "Disabling the router’s forwarding interfaces.",
+          "explanation": "Interface shutdown is unrelated to saving the password."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "A working running configuration and a persistent startup configuration are different states. Verify the change, then save it so reboot restores the intended credentials.",
+      "references": [
+        {
+          "title": "Catalyst 3750-X and 3560-X Configuration Guide: Configuring Switch-Based Authentication",
+          "url": "https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst3750x_3560x/software/release/15-0_2_se/configuration/guide/3750x_cg/swauthen.html",
+          "section": "Protecting Access to Privileged EXEC Commands; Configuring Username and Password Pairs"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-091",
+      "domain": 6,
+      "objectives": [
+        "6.1"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "Before pushing a switch template, an automation workflow compares its required features with each target’s platform and software version. What problem does this precheck address most directly?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Every platform implements every command identically",
+          "explanation": "Platform and release differences are the reason compatibility needs checking."
+        },
+        {
+          "id": "B",
+          "text": "The speed at which Ethernet frames enter a port",
+          "explanation": "The precheck concerns configuration support, not physical frame timing."
+        },
+        {
+          "id": "C",
+          "text": "Whether all users have memorized the switch hostname",
+          "explanation": "User recollection is unrelated to feature compatibility."
+        },
+        {
+          "id": "D",
+          "text": "Applying an unsupported configuration to an incompatible target",
+          "explanation": "The check can identify targets that do not meet the template’s requirements."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "A common automation workflow can encounter different device capabilities. Checking explicit requirements before deployment helps identify incompatible targets before their configuration is changed.",
+      "references": [
+        {
+          "title": "What Is Network Automation?",
+          "url": "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-automation.html",
+          "section": "Network automation; profiles and policies; automated lifecycle management"
+        },
+        {
+          "title": "How Network Automation is Different",
+          "url": "https://docs.ansible.com/projects/ansible/latest/network/getting_started/network_differences.html",
+          "section": "Execution on the control node; Multiple communication protocols; Collections organized by network platform"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-092",
+      "domain": 6,
+      "objectives": [
+        "6.2"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A controller-based design uses three cooperating controller servers to present one logical policy service. How does this compare with a single logical controller?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "A logical controller must always be one physical computer",
+          "explanation": "Logical centralization does not dictate the physical server count."
+        },
+        {
+          "id": "B",
+          "text": "A single logical control service can be implemented by multiple servers",
+          "explanation": "The physical cluster can present a coordinated logical controller."
+        },
+        {
+          "id": "C",
+          "text": "Three servers force each data packet to traverse all three",
+          "explanation": "Controller replication does not inherently place all servers in the user path."
+        },
+        {
+          "id": "D",
+          "text": "Using multiple servers makes a northbound API impossible",
+          "explanation": "Applications can consume a logical service backed by several servers."
+        }
+      ],
+      "answer": [
+        "B"
+      ],
+      "explanation": "Logical and physical organization are different dimensions. A controller cluster can provide one logical service, although its actual availability still depends on its implementation and failure conditions.",
+      "references": [
+        {
+          "title": "RFC 7426: Software-Defined Networking (SDN): Layers and Architecture Terminology",
+          "url": "https://www.rfc-editor.org/rfc/rfc7426.html",
+          "section": "3.1 Overview; 3.2 Network Devices; 3.3 Control Plane; 3.5.3 Locality"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-093",
+      "domain": 6,
+      "objectives": [
+        "6.3.b"
+      ],
+      "type": "multiple",
+      "difficulty": "Applied",
+      "prompt": "A service application sends a network intent to a controller. The controller uses a device-management protocol to implement the request. Which two functions belong to these respective boundaries? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The application uses the controller’s northbound interface",
+          "explanation": "The northbound boundary exposes network services to applications."
+        },
+        {
+          "id": "B",
+          "text": "The application must directly program every switch ASIC",
+          "explanation": "The controller abstraction can hide those device-specific details."
+        },
+        {
+          "id": "C",
+          "text": "The controller uses a southbound interface toward managed devices",
+          "explanation": "That boundary connects the controller with the infrastructure it manages."
+        },
+        {
+          "id": "D",
+          "text": "The southbound API is defined by traffic going geographically south",
+          "explanation": "Northbound and southbound are architectural labels, not compass directions."
+        },
+        {
+          "id": "E",
+          "text": "The application’s reply to the controller becomes a new data plane",
+          "explanation": "Application API exchanges do not replace device forwarding."
+        }
+      ],
+      "answer": [
+        "A",
+        "C"
+      ],
+      "explanation": "The application consumes the controller’s service abstraction through the northbound side. The controller interacts with managed devices through its southbound side.",
+      "references": [
+        {
+          "title": "Software-Defined Networking (SDN) Definition",
+          "url": "https://www.cisco.com/c/en/us/solutions/software-defined-networking/overview.html",
+          "section": "SDN elements; Features and benefits"
+        },
+        {
+          "title": "RFC 7426: Software-Defined Networking (SDN): Layers and Architecture Terminology",
+          "url": "https://www.rfc-editor.org/rfc/rfc7426.html",
+          "section": "3.1 Overview; 3.2 Network Devices; 3.3 Control Plane; 3.5.3 Locality"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-094",
+      "domain": 6,
+      "objectives": [
+        "6.4"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A script sends an alert whenever utilization exceeds a manually entered 80% threshold. It does not learn from past data or adapt that threshold. Which conclusion is justified?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "The script is generative AI because it creates an alert message",
+          "explanation": "Creating a fixed alert message does not establish a generative model."
+        },
+        {
+          "id": "B",
+          "text": "Every automated action is evidence of machine learning",
+          "explanation": "Automation can execute fixed rules without learning."
+        },
+        {
+          "id": "C",
+          "text": "The script demonstrates rule-based automation, not a learned model",
+          "explanation": "The described decision rule was explicitly programmed and remains fixed."
+        },
+        {
+          "id": "D",
+          "text": "The script must forecast tomorrow’s utilization before alerting",
+          "explanation": "The stated rule compares the present observation with a threshold."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Automation and machine learning are not interchangeable. This script executes an explicitly programmed condition rather than deriving a decision model from data.",
+      "references": [
+        {
+          "title": "What is AIOps?",
+          "url": "https://developer.cisco.com/articles/what-is-aiops/",
+          "section": "The core components of AIOps; Is AIOps all you need?"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-095",
+      "domain": 6,
+      "objectives": [
+        "6.5"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A controller returns the response shown after accepting a configuration job. The API documentation says jobs run asynchronously. What does this response establish?",
+      "exhibit": {
+        "kind": "code",
+        "content": "HTTP/1.1 202 Accepted\nContent-Type: application/json\n\n{\"jobId\":\"job-327\",\"status\":\"queued\"}"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "The server accepted the request; the client should check the job’s final result",
+          "explanation": "202 Accepted does not establish completion of asynchronous processing."
+        },
+        {
+          "id": "B",
+          "text": "Every target device has already applied and verified the change",
+          "explanation": "The response reports acceptance rather than per-device success."
+        },
+        {
+          "id": "C",
+          "text": "The request was rejected because 202 is a client error",
+          "explanation": "202 belongs to the successful 2xx response class."
+        },
+        {
+          "id": "D",
+          "text": "The client must immediately repeat POST to acknowledge the job",
+          "explanation": "No such duplicate-submission requirement is stated."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "Acceptance and completion are different states in an asynchronous API. The client should follow the documented job-status process to learn whether execution ultimately succeeded.",
+      "references": [
+        {
+          "title": "RFC 9110: HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "section": "9 Methods; 15 Status Codes"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-096",
+      "domain": 6,
+      "objectives": [
+        "6.5"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A device API documents JSON and XML representations for its interface resource. A client can use the same URI and GET method with different supported response media types. Which statement is accurate?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Changing representation changes GET into a Create operation",
+          "explanation": "The method still requests retrieval."
+        },
+        {
+          "id": "B",
+          "text": "XML responses prove the API cannot be REST-based",
+          "explanation": "REST does not require JSON as its only representation format."
+        },
+        {
+          "id": "C",
+          "text": "JSON carries authentication automatically but XML cannot",
+          "explanation": "Neither encoding supplies authentication by itself."
+        },
+        {
+          "id": "D",
+          "text": "The resource can have different representations without changing the requested Read operation",
+          "explanation": "The resource identity, operation and data encoding are separate concepts."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "An API resource can be represented in supported formats such as JSON or XML. The retrieval operation remains GET/Read even when the representation format changes.",
+      "references": [
+        {
+          "title": "RFC 9110: HTTP Semantics",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "section": "9 Methods; 15 Status Codes"
+        },
+        {
+          "title": "Architectural Styles and the Design of Network-based Software Architectures, Chapter 5: Representational State Transfer",
+          "url": "https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm",
+          "section": "5.1.3 Stateless; 5.1.5 Uniform Interface"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-097",
+      "domain": 6,
+      "objectives": [
+        "6.6"
+      ],
+      "type": "multiple",
+      "difficulty": "Challenge",
+      "prompt": "An engineer wants to preview changes from an Ansible playbook. Every task’s module supports check mode, and no task forces normal execution. Which two statements apply to running it with --check? Select two.",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "It guarantees that production application traffic will work after a later deployment",
+          "explanation": "A dry run is not an end-to-end service acceptance test."
+        },
+        {
+          "id": "B",
+          "text": "Supported modules report changes they would make",
+          "explanation": "Check mode can describe proposed changes."
+        },
+        {
+          "id": "C",
+          "text": "It encrypts all playbook secrets automatically",
+          "explanation": "Check mode controls execution behavior, not secret encryption."
+        },
+        {
+          "id": "D",
+          "text": "It applies all changes and then rolls them back",
+          "explanation": "Under these assumptions it does not apply the changes in the first place."
+        },
+        {
+          "id": "E",
+          "text": "It can help review the playbook without applying its remote changes",
+          "explanation": "The stated support and absence of overrides permit the dry-run behavior."
+        }
+      ],
+      "answer": [
+        "B",
+        "E"
+      ],
+      "explanation": "Check mode is useful for previewing supported configuration tasks. It is not proof of application-level correctness, and its guarantees depend on module support and task settings.",
+      "references": [
+        {
+          "title": "Validating tasks: check mode and diff mode",
+          "url": "https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_checkmode.html",
+          "section": "Using check mode; Using diff mode; Enforcing or preventing check mode on tasks"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-098",
+      "domain": 6,
+      "objectives": [
+        "6.6"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "Terraform manages an existing virtual network. The team deletes only Terraform’s state file, leaving the actual network and configuration untouched. Which risk should it recognize?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "Deleting state automatically deletes the network through its API",
+          "explanation": "Removing a local tracking file is not a resource-destruction request."
+        },
+        {
+          "id": "B",
+          "text": "The configuration becomes a complete replacement for every missing object binding",
+          "explanation": "Configuration alone does not necessarily identify the real managed object IDs."
+        },
+        {
+          "id": "C",
+          "text": "Terraform loses recorded bindings to the existing managed objects",
+          "explanation": "State maps resource declarations to actual objects, so losing it disrupts management."
+        },
+        {
+          "id": "D",
+          "text": "The virtual network immediately stops routing because state is its forwarding table",
+          "explanation": "Terraform state is management metadata, not the network’s packet-forwarding table."
+        }
+      ],
+      "answer": [
+        "C"
+      ],
+      "explanation": "Terraform state records the relationship between resource declarations and real objects. Losing that information can lead to unintended management behavior even though the infrastructure still exists.",
+      "references": [
+        {
+          "title": "State",
+          "url": "https://developer.hashicorp.com/terraform/language/state",
+          "section": "State; mapping configuration to real resources"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-099",
+      "domain": 6,
+      "objectives": [
+        "6.7"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "A response schema defines serial:null as “unknown,” serial:\"\" as “known empty text,” and an omitted serial member as “not returned.” The exhibit is one response. Which interpretation fits it?",
+      "exhibit": {
+        "kind": "code",
+        "content": "{\"hostname\":\"wireless-2\",\"serial\":null}"
+      },
+      "choices": [
+        {
+          "id": "A",
+          "text": "The serial value is explicitly unknown",
+          "explanation": "The member is present with the null literal as defined by this schema."
+        },
+        {
+          "id": "B",
+          "text": "The serial field was omitted from the response",
+          "explanation": "The member is visibly present."
+        },
+        {
+          "id": "C",
+          "text": "The serial value is a zero-length string",
+          "explanation": "A zero-length string would be written as \"\"."
+        },
+        {
+          "id": "D",
+          "text": "The serial value is the string null",
+          "explanation": "The value would need quotation marks to be that string."
+        }
+      ],
+      "answer": [
+        "A"
+      ],
+      "explanation": "JSON null, an empty string and an absent object member are different structures. The scenario’s explicit schema determines what those distinctions mean operationally.",
+      "references": [
+        {
+          "title": "RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format",
+          "url": "https://www.rfc-editor.org/rfc/rfc8259.html",
+          "section": "2 JSON Grammar; 3 Values; 4 Objects; 5 Arrays; 6 Numbers; 7 Strings"
+        }
+      ]
+    },
+    {
+      "id": "CCNA5-100",
+      "domain": 6,
+      "objectives": [
+        "6.7"
+      ],
+      "type": "single",
+      "difficulty": "Applied",
+      "prompt": "The interface API expects counters to be a JSON object with numeric in and out members. Which candidate meets that requirement?",
+      "exhibit": null,
+      "choices": [
+        {
+          "id": "A",
+          "text": "{\"counters\":[12,9]}",
+          "explanation": "This supplies an array, without named in and out members."
+        },
+        {
+          "id": "B",
+          "text": "{\"counters\":{\"in\":\"12\",\"out\":\"9\"}}",
+          "explanation": "The values are strings rather than the required numbers."
+        },
+        {
+          "id": "C",
+          "text": "{\"counters\":\"{in:12,out:9}\"}",
+          "explanation": "The counters value is one string, not a nested object."
+        },
+        {
+          "id": "D",
+          "text": "{\"counters\":{\"in\":12,\"out\":9}}",
+          "explanation": "The nested object contains the required names and numeric values."
+        }
+      ],
+      "answer": [
+        "D"
+      ],
+      "explanation": "Valid JSON alone is not enough to satisfy a particular API’s data contract. The accepted candidate has both the required object structure and the required numeric value types.",
+      "references": [
+        {
+          "title": "RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format",
+          "url": "https://www.rfc-editor.org/rfc/rfc8259.html",
+          "section": "2 JSON Grammar; 3 Values; 4 Objects; 5 Arrays; 6 Numbers; 7 Strings"
+        }
+      ]
+    }
+  ]
+}

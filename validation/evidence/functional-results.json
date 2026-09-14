@@ -1,0 +1,104 @@
+{
+  "streamlit_version": "1.55.0",
+  "coverage": {
+    "validated_questions": 1000,
+    "apptest_script_runs": 8061,
+    "empty_submission_rejected": 1000,
+    "wrong_practice_submitted_and_revealed": 1000,
+    "types_matching": 41,
+    "flag_persisted": 1000,
+    "types_single": 815,
+    "exhibits_table": 62,
+    "types_multiple": 144,
+    "exhibits_code": 131,
+    "full_set_backup_roundtrips": 20,
+    "full_set_session_restores": 10,
+    "correct_review_preserves_score_and_wrong_history": 1000,
+    "full_set_restarts_preserve_history": 10,
+    "correct_practice_submitted_and_revealed": 1000,
+    "cross_set_backup_rejected": 90,
+    "set_switch_roundtrips": 10,
+    "overall_results_aggregation": 1
+  },
+  "sets": [
+    {
+      "set": 1,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18759,
+      "storage_writes": 1207
+    },
+    {
+      "set": 2,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18549,
+      "storage_writes": 1208
+    },
+    {
+      "set": 3,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18619,
+      "storage_writes": 1208
+    },
+    {
+      "set": 4,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18619,
+      "storage_writes": 1208
+    },
+    {
+      "set": 5,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18719,
+      "storage_writes": 1208
+    },
+    {
+      "set": 6,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18689,
+      "storage_writes": 1208
+    },
+    {
+      "set": 7,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18549,
+      "storage_writes": 1208
+    },
+    {
+      "set": 8,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18609,
+      "storage_writes": 1208
+    },
+    {
+      "set": 9,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18699,
+      "storage_writes": 1208
+    },
+    {
+      "set": 10,
+      "questions": 100,
+      "completed": true,
+      "saved_bytes": 18749,
+      "storage_writes": 1208
+    }
+  ],
+  "findings": [],
+  "started_at": "2026-09-14T16:35:08+0800",
+  "elapsed_seconds": 233.2,
+  "overall_metrics": {
+    "Completed sets": "10 / 10",
+    "Submitted overall": "1000 / 1,000",
+    "Accuracy overall": "100.0%",
+    "Pending review": "0"
+  }
+}

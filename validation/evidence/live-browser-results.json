@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-14",
+  "origin": "http://127.0.0.1:8502",
+  "browser": "Codex in-app browser",
+  "viewport_observed": [
+    1280,
+    720
+  ],
+  "production_site_modified": false,
+  "checks": [
+    {
+      "check": "direct Set10 shows selector/header Set10 and saved acknowledgement",
+      "passed": true
+    },
+    {
+      "check": "Set10 Q1 wrong answer retained and saved",
+      "passed": true
+    },
+    {
+      "check": "Set10 Q1 correct review retains question and wrong first score; pending becomes0",
+      "passed": true
+    },
+    {
+      "check": "switch Set10 to1 loads isolated empty Set1 without exception",
+      "passed": true
+    },
+    {
+      "check": "Set1 Q74 C submission retains Q74 and correct configuration feedback",
+      "passed": true
+    },
+    {
+      "check": "Set1 Q74 correct score survives refresh",
+      "passed": true
+    },
+    {
+      "check": "actual backup upload replaces Set1 with Q2 wrong A and flag; saved acknowledged",
+      "passed": true
+    },
+    {
+      "check": "refresh after restore retains Q2 wrong history and pending1",
+      "passed": true
+    },
+    {
+      "check": "question heading no longer has stale preceding-question anchor",
+      "passed": true
+    },
+    {
+      "check": "review layout visually inspected",
+      "passed": true
+    }
+  ],
+  "scope": "Targeted browser checks; synthetic local progress only; no full pixel or cross-browser matrix."
+}
